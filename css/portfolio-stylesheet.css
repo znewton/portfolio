@@ -46,6 +46,10 @@ body{
     border-left-width: 1px;
     border-left-style: solid;
 }
+#site-navbar .external-links a[href*='github.com']:hover{color: #111; box-shadow: #111}
+#site-navbar .external-links a[href*='linkedin.com']:hover{color: #0077b5; box-shadow: #0077b5}
+#site-navbar .external-links a[href*='facebook.com']:hover{color: #3b5998; box-shadow: #3b5998}
+#site-navbar .external-links a[href*='twitter.com']:hover{color: #1DA1F2; box-shadow: #1DA1F2}
 
 #site-navbar a:hover,
 #site-navbar .active{
