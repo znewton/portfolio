@@ -235,11 +235,12 @@ ul > li:before{
 }
 #experience .time_period,
 #activities .dates {
+    display: inline-block;
     font-weight: 600;
     color: #888;
     /*text-align: right;*/
 }
-#experience div, li{
+#experience div, #experience li{
     margin-bottom: 5px;
 }
 #experience .section_content,
