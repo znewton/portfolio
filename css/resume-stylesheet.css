@@ -7,9 +7,9 @@ get rid of bottom line
 */
 
 #resume {
-    font-size: 1.1em;
+    font-size: 1em;
     width: 700px;
-    height: 900px;
+    /*height: 900px;*/
     overflow: hidden;
     background: white;
     margin: 8px auto;
@@ -194,6 +194,9 @@ ul > li:before{
     font-weight: 600;
     color: #888;
     /*text-align: right;*/
+}
+#experience div, li{
+    margin-bottom: 5px;
 }
 #experience .section_content,
 #skills .section_content,
