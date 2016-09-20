@@ -235,7 +235,7 @@ ul > li:before{
 }
 #experience .time_period,
 #activities .dates {
-    display: inline-block;
+    /*display: inline-block;*/
     font-weight: 600;
     color: #888;
     /*text-align: right;*/
