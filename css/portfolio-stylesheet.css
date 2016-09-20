@@ -64,7 +64,7 @@ body{
     
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 800px) {
     #site-navbar {
         width: 100vw;
         height: 10vw;
@@ -100,7 +100,7 @@ body{
 .container {
     padding-top: 60px;
 }
-@media screen and (max-device-width: 600px) {
+@media  screen and (max-width: 800px) {
     .container{
         padding-top: 10.2vw;
     }
@@ -154,7 +154,7 @@ body{
     background-color: #fafafa;
 }
 
-@media screen and (max-device-width: 600px){
+@media screen and (max-width: 800px){
 
     #site-content .container .card{
         width: 98vw;
@@ -242,7 +242,7 @@ body{
     cursor: pointer;
 }
 
-@media screen and (max-device-width: 600px){
+@media screen and (max-width: 800px){
 
     .card .carousel {
         width: 100%;

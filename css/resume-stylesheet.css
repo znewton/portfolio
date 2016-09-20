@@ -15,7 +15,7 @@ get rid of bottom line
     margin: 8px auto;
     box-shadow: 2px 2px 5px #999, -1px -1px 5px #aaa;
 }
-@media screen and (max-device-width: 600px){
+@media screen and (max-width: 800px){
     #resume {
         font-size: 2.1vw;
         width: 98vw;
@@ -107,7 +107,7 @@ get rid of bottom line
     font-size: 2.3em;
     font-weight: 600;
 }
-@media screen and (max-device-width: 600px){
+@media screen and (max-width: 800px){
 
     .section_header {
         font-size: 3.5vw;
