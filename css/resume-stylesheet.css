@@ -15,6 +15,14 @@ get rid of bottom line
     margin: 8px auto;
     box-shadow: 2px 2px 5px #999, -1px -1px 5px #aaa;
 }
+@media screen and (max-device-width: 600px){
+    #resume {
+        font-size: 2.1vw;
+        width: 98vw;
+
+        box-shadow: 0.7vw 0.7vw 2vw #999, -0.5vw -0.5vw 2vw #aaa;
+    }
+}
 @media print {
     #site-navbar{
         display: none !important;
@@ -98,6 +106,24 @@ get rid of bottom line
 #name {
     font-size: 2.3em;
     font-weight: 600;
+}
+@media screen and (max-device-width: 600px){
+
+    .section_header {
+        font-size: 3.5vw;
+    }
+
+    #contact_info #basic_contact{
+        position: relative;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        margin-right: 1vw;
+    }
+    #name {
+        font-size: 5.2vw;
+        font-weight: 600;
+    }
 }
 
 #contact_info #basic_contact > div{
