@@ -64,8 +64,46 @@ body{
     
 }
 
+@media screen and (max-device-width: 600px) {
+    #site-navbar {
+        width: 100vw;
+        height: 10vw;
+        box-shadow: 1vw 0 1.5vw #ddd;
+    }
+    #site-navbar .site-links{
+        left: 1vw;
+        max-height: 100%;
+    }
+    #site-navbar .external-links{
+        right: 1vw;
+        max-height:100%;
+    }
+    #site-navbar a{
+        min-height: 10vw ;
+        max-height: 10vw ;
+        line-height: 10vw;
+        vertical-align: middle;
+        padding: 0 1vw;
+        font-size: 6vw;
+    }
+    #site-navbar a:hover,
+    #site-navbar .active{
+        box-shadow: 0 1.5vw 1.5vw -1.5vw #8ac;
+    }
+
+    #site-navbar #home {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+}
+
 .container {
     padding-top: 60px;
+}
+@media screen and (max-device-width: 600px) {
+    .container{
+        padding-top: 10.2vw;
+    }
 }
 
 #utility-buttons {
@@ -114,6 +152,26 @@ body{
     padding: 5px;
     font-size: 1.5em;
     background-color: #fafafa;
+}
+
+@media screen and (max-device-width: 600px){
+
+    #site-content .container .card{
+        width: 98vw;
+        margin: 1vw 1vw;
+        box-shadow: 1vw 1vw 1.2vw #ddd;
+    }
+
+    .card .title {
+        font-size: 5vw;
+        padding: 1vw;
+        box-shadow: 0 1vw 1.5vw -1.5vw #aaa;
+    }
+
+    .card .description {
+        padding: 2vw;
+        font-size: 4vw;
+    }
 }
 
 .carousel {
@@ -182,4 +240,29 @@ body{
 .carousel .decrement:hover {
     color: #999;
     cursor: pointer;
+}
+
+@media screen and (max-device-width: 600px){
+
+    .card .carousel {
+        width: 100%;
+        height: 50vw;
+    }
+    .carousel li {
+        list-style: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .card .carousel img {
+        height: 50vw;
+    }
+
+    .carousel .increment,
+    .carousel .decrement{
+        height: 100%;
+        width: 20vw;
+        line-height: 50vw;
+        font-size: 5vw;
+    }
+
 }
