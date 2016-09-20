@@ -123,21 +123,27 @@ body{
     width: 100%;
     height: 50vh;
     position: relative;
+    background-color: #fafafa;
 }
 .carousel li {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     list-style: none;
-    /*width: 100%;*/
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 0;
+    transition: opacity 0.4s;
 }
 .carousel ol {
     padding: 0;
     margin: 0;
 }
 .carousel .active {
-    display: block !important;
+    opacity: 1;
+    transition: opacity 0.4s;
 }
 .card .carousel img {
     width: unset;
@@ -149,11 +155,13 @@ body{
     position: absolute;
     left: 0;
     top: 0;
+    /*background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0));*/
 }
 .carousel .increment {
     position: absolute;
     right: 0;
     top: 0;
+    /*background-image: linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0));*/
 }
 .carousel .increment,
 .carousel .decrement{
@@ -162,7 +170,16 @@ body{
     width: 10%;
     line-height: 50vh;
     vertical-align: middle;
-    background-color: rgba(0,0,0, 0.2);
-    color: #eee;
+    /*background-color: rgba(0,0,0, 0.2);*/
+    background-color: transparent;
+    color: #bbb;
+    font-size: 3em;
     z-index: 5;
+    transition: color 0.2s;
+}
+
+.carousel .increment:hover,
+.carousel .decrement:hover {
+    color: #999;
+    cursor: pointer;
 }
