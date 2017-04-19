@@ -1,0 +1,47 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -d --watch",
+    "build": "webpack --optimize-minimize --progress -p",
+    "serve": "node index.js"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "scss"
+  ],
+  "author": "znewton",
+  "license": "ISC",
+  "dependencies": {
+    "history": "^4.6.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router-dom": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "express": "^4.15.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.1",
+    "path": "^0.12.7",
+    "sass-loader": "^6.0.3",
+    "serve": "^5.0.4",
+    "style-loader": "^0.15.0",
+    "webpack": "^2.2.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  }
+}
