@@ -1,0 +1,13 @@
+@import './Sass/mixins';
+@import './Sass/reset';
+@import './Sass/theme';
+
+body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  font: 100% sans-serif;
+  color:  #222;
+}

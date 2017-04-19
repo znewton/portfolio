@@ -7,7 +7,7 @@ const server = app.listen(port);
 
 
 // serve static assets normally
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build'));
 
 app.get('*', function (request, response){
 	//
