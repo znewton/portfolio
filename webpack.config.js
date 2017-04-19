@@ -9,7 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
-	entry: APP_DIR + '/index.jsx',
+	entry: APP_DIR + '/index.js',
 	output: {
 		path: BUILD_DIR,
 		filename: 'bundle.min.js'
@@ -31,8 +31,12 @@ const config = {
 			},
       {
         test: /\.html$/,
-        include: PUBLIC_DIR,
-        loader: 'html-loader'
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+          removeComments: false,
+          collapseWhitespace: false
+        }
       }
 		]
 	},
@@ -45,7 +49,9 @@ const config = {
 		}),
 		new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
+      title: 'Portfolio',
+      minify: false,
+      template: PUBLIC_DIR+'/index.html',
     })
 	]
 };
