@@ -1,0 +1,5 @@
+.SectionWrapper {
+  margin-left: 0;
+  overflow-x: hidden;
+  @include transition(margin-left 125ms ease);
+}

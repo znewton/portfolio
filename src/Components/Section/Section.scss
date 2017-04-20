@@ -1,0 +1,10 @@
+.Section {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: $navbar_height;
+  display: inline-block;
+  @include bp-medium {
+    padding-top: 0;
+    padding-bottom: $navbar_height;
+  }
+}

@@ -2,6 +2,9 @@
 @import './Sass/reset';
 @import './Sass/theme';
 
+@import './Components/SectionWrapper/SectionWrapper';
+@import './Components/Section/Section';
+
 body {
   position: fixed;
   left: 0;
@@ -10,4 +13,7 @@ body {
   height: 100vh;
   font: 100% sans-serif;
   color:  #222;
+  * {
+    box-sizing: border-box;
+  }
 }

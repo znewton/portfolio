@@ -18,10 +18,8 @@
   "author": "znewton",
   "license": "ISC",
   "dependencies": {
-    "history": "^4.6.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-router-dom": "^4.0.0"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
