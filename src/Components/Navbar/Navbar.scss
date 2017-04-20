@@ -1,0 +1,19 @@
+.Navbar {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fafafa;
+  a {
+    display: inline-block;
+    height: $navbar_height;
+    line-height: $navbar_height;
+    padding: 0 1em;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  @include bp-medium {
+    top: unset;
+    bottom: 0;
+  }
+}
