@@ -1,5 +1,10 @@
 .SectionWrapper {
-  margin-left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(0) rotate(0);
   overflow-x: hidden;
-  @include transition(margin-left 125ms ease);
+  transition-delay: 50ms;
+  @include transition(transform 400ms ease);
 }
