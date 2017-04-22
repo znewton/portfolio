@@ -1,10 +1,14 @@
 .Section {
-  width: 100vw;
+  width: 0;
   min-height: 100vh;
   padding-top: $navbar_height;
   display: inline-block;
+  @include transition(width 125ms ease)
   @include bp-medium {
     padding-top: 0;
     padding-bottom: $navbar_height;
+  }
+  &.active {
+    width: 100vw;
   }
 }
