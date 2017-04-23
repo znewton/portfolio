@@ -11,7 +11,7 @@ export default class SectionWrapper extends Component {
           width: (this.props.children.length*20+80)+'vw'
         }}
       >
-        {this.props.children}
+          {this.props.children}
       </section>
     );
   }

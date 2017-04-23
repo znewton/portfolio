@@ -37,7 +37,9 @@ export default class Section extends Component {
           backgroundColor: '#'+this.state.color,
         }}
       >
-        {this.props.children}
+        <div>
+          {this.props.children}
+        </div>
       </section>
     );
   }

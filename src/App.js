@@ -18,11 +18,11 @@ export default class App extends Component {
       <div className="App">
         <Navbar routes={routes} />
         <SectionWrapper>
-          <Section path="/">Home</Section>
-          <Section path="test">Test</Section>
-          <Section path="test1">Test 1</Section>
-          <Section path="test2">Test 2</Section>
-          <Section path="*">404</Section>
+          <Section path="/"><h1>Home</h1></Section>
+          <Section path="test"><h1>Test</h1></Section>
+          <Section path="test1"><h1>Test 1</h1></Section>
+          <Section path="test2"><h1>Test 2</h1></Section>
+          <Section path="*"><h1>404</h1></Section>
         </SectionWrapper>
       </div>
     );
