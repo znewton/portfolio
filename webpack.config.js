@@ -29,6 +29,14 @@ const config = {
 					{loader : "sass-loader"}
 				])
 			},
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+	    	loader:'url-loader',
+				query: {
+					limit: 1024,
+					name: 'images/[name].[ext]'
+				}
+			},
       {
         test: /\.html$/,
         loader: 'html-loader',
@@ -38,7 +46,7 @@ const config = {
           collapseWhitespace: false
         }
       }
-		]
+		],
 	},
 	plugins: [
 		new ExtractTextPlugin('bundle.min.css'),

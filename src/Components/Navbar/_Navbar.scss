@@ -1,0 +1,48 @@
+.Navbar {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: $navbar_height;
+  background-color: #fafafa;
+  @include box-shadow(0 1px 10px rgba(0,0,0,0.2));
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33vw;
+    display: flex;
+    @include bp-medium {
+      width: 100vw;
+    }
+  }
+  a {
+    color: #3a3a6a;
+    display: inline-block;
+    height: $navbar_height;
+    line-height: $navbar_height;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    flex-grow: 1;
+  }
+  #navbar-slider {
+    display: block;
+    background-color: #1da1f2;
+    height: $navbar_height/7;
+    position: absolute;
+    bottom: 0;
+    @include transition(left $slide_duration ease);
+    @include bp-medium {
+      bottom: unset;
+      top: 0;
+    }
+  }
+  @include bp-medium {
+    top: unset;
+    bottom: 0;
+    @include box-shadow(0 -1px 10px 1px rgba(0,0,0,0.1));
+  }
+}

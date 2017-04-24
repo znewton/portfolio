@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
 
 export default class Navbar extends Component {
-  constructor() {
-    super();
-    this.state = {
-      active: '/',
+  componentDidMount() {
+    let offset = 0;
+    for (offset; offset < this.props.routes.length; offset++) {
+      if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
     }
+    this.refs.navbarSlider.style.left = this.props.routes.length/100*offset+'%';
   }
-  handleRouteChange(path) {
-    this.setState({active: path})
+  handleRouteChange(offset) {
+    this.refs.navbarSlider.style.left = offset/this.refs.navLinks.offsetWidth*100+'%';
   }
   render() {
     return (
-      <section className="Navbar">
-        {this.props.routes.map((route) => (
-          <a
-            href={'#'+route.path}
-            key={route.path}
-            onClick={() => this.handleRouteChange(route.path)}
-          >{route.label}</a>
-        ))}
-      </section>
+      <nav className="Navbar">
+        <div
+          ref="navLinks"
+          className="nav-links"
+        >
+          {this.props.routes.map((route) => (
+            <a
+              href={'#'+route.path}
+              key={route.path}
+              onClick={(e) => this.handleRouteChange(e.target.offsetLeft)}
+            >{route.label}</a>
+          ))}
+          <span
+            ref="navbarSlider"
+            id="navbar-slider"
+            style={{
+              width: (100/this.props.routes.length)+'%'
+            }}
+          ></span>
+        </div>
+      </nav>
     );
   }
 }

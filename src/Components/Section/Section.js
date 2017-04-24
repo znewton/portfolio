@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 export default class Section extends Component {
-  constructor() {
-    super();
-    this.state = {
-      color:(Math.random()*0xFFFFFF<<0).toString(16),
-    }
-  }
   componentDidMount() {
     if(window.addEventListener) {
       if(window.location.hash) {
@@ -24,6 +18,7 @@ export default class Section extends Component {
     if(this.props.path == hash.slice(1))
       this.refs.Section.classList.add('active');
     else {
+      this.refs.Section.scrollTop = 0;
       this.refs.Section.classList.remove('active');
     }
   }
@@ -33,9 +28,6 @@ export default class Section extends Component {
         ref="Section"
         data-path={'#'+this.props.path}
         className={"Section"+(this.props.active ? ' active' : '')}
-        style={{
-          backgroundColor: '#'+this.state.color,
-        }}
       >
         <div>
           {this.props.children}

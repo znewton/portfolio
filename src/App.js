@@ -5,6 +5,8 @@ import SectionWrapper from './Components/SectionWrapper/SectionWrapper';
 import Section from './Components/Section/Section';
 import Navbar from './Components/Navbar/Navbar';
 
+import Home from './Pages/Home/Home';
+
 const routes = [
   { path: '/', label: 'Home' },
   { path: 'test', label: 'Test' },
@@ -18,7 +20,7 @@ export default class App extends Component {
       <div className="App">
         <Navbar routes={routes} />
         <SectionWrapper>
-          <Section path="/"><h1>Home</h1></Section>
+          <Section path="/"><Home /></Section>
           <Section path="test"><h1>Test</h1></Section>
           <Section path="test1"><h1>Test 1</h1></Section>
           <Section path="test2"><h1>Test 2</h1></Section>
