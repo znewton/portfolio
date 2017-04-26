@@ -4,9 +4,17 @@
   top: 0;
   left: 0;
   z-index: 2;
+  overflow: hidden;
   height: $navbar_height;
+  line-height: $navbar_height;
   background-color: #fafafa;
   @include box-shadow(0 1px 10px rgba(0,0,0,0.2));
+  .nav-title {
+    display: inline-block;
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.5em;
+  }
   .nav-links {
     position: absolute;
     top: 0;
@@ -18,10 +26,8 @@
     }
   }
   a {
-    color: #3a3a6a;
     display: inline-block;
-    height: $navbar_height;
-    line-height: $navbar_height;
+    color: #3a3a6a;
     padding: 0 1em;
     text-align: center;
     text-decoration: none;

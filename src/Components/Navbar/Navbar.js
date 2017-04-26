@@ -6,23 +6,28 @@ export default class Navbar extends Component {
     for (offset = 0; offset < this.props.routes.length; offset++) {
       if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
     }
-    this.refs.navbarSlider.style.left = 100/this.props.routes.length*offset+'%';
+    this.handleRouteChange(offset);
   }
   handleRouteChange(offset) {
-    this.refs.navbarSlider.style.left = offset/this.refs.navLinks.offsetWidth*100+'%';
+    this.refs.navbarSlider.style.left = 100/this.props.routes.length*offset+'%';
   }
   render() {
     return (
       <nav className="Navbar">
+        <a
+          href="#/"
+          className="nav-title"
+          onClick={() => this.handleRouteChange(0)}
+        >znewton</a>
         <div
           ref="navLinks"
           className="nav-links"
         >
-          {this.props.routes.map((route) => (
+          {this.props.routes.map((route, i) => (
             <a
               href={'#'+route.path}
               key={route.path}
-              onClick={(e) => this.handleRouteChange(e.target.offsetLeft)}
+              onClick={() => this.handleRouteChange(i)}
             >{route.label}</a>
           ))}
           <span
