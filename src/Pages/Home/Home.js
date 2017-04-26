@@ -11,6 +11,7 @@ export default class Home extends Component {
         <HeroImage
           src={waterfall}
           alt="Me standing on a log in a creek over a waterall"
+          overlay={true}
         />
       </div>
     );

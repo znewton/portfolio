@@ -10,10 +10,7 @@ export default class HeroImage extends Component {
           style={{top: this.props.top}}
         />
         {this.props.overlay && (
-          <span
-            className="hero-overlay"
-            style={{}}
-          ></span>
+          <span className="hero-overlay"></span>
         )}
       </div>
     );
@@ -23,5 +20,6 @@ export default class HeroImage extends Component {
 HeroImage.propTypes = {
   src: React.PropTypes.string.isRequired,
   alt: React.PropTypes.string.isRequired,
-  top: React.PropTypes.string
+  top: React.PropTypes.string,
+  overlay: React.PropTypes.bool
 }

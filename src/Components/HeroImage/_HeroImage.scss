@@ -6,9 +6,21 @@
   img {
     position: absolute;
     top: 0;
-    left: -1pt;
-    width: 102%;
+    left: -1vw;
+    width: 102vw;
     height: auto;
-    @include filter(blur(1px) brightness(80%) saturate(50%));
+    @include filter(blur(1px) saturate(50%));
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    @include linear-gradient(bottom right, #1da1f2, #000000, #1da1f2);
+  }
+  @include bp-medium {
+    display: none;
   }
 }
