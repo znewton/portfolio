@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 export default class Navbar extends Component {
   componentDidMount() {
     let offset = 0;
-    for (offset; offset < this.props.routes.length; offset++) {
+    for (offset = 0; offset < this.props.routes.length; offset++) {
       if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
     }
-    this.refs.navbarSlider.style.left = this.props.routes.length/100*offset+'%';
+    this.refs.navbarSlider.style.left = 100/this.props.routes.length*offset+'%';
   }
   handleRouteChange(offset) {
     this.refs.navbarSlider.style.left = offset/this.refs.navLinks.offsetWidth*100+'%';

@@ -1,6 +1,5 @@
 .Section {
   width: 0;
-  overflow-x: hidden;
   position: relative;
   min-height: 100vh;
   padding-top: $navbar_height;
@@ -11,7 +10,7 @@
     padding-bottom: $navbar_height;
   }
   &.active {
-    width: 100vw;
+    width: 100%;
     & > div {
       right: unset;
       left: 0;
@@ -20,7 +19,7 @@
   & > div {
     width: 100vw;
     position: absolute;
-    right: 0;
+    // right: 0;
     top: $navbar_height;
     @include bp-medium {
       top: 0;

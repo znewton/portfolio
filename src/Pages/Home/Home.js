@@ -12,7 +12,13 @@ export default class Home extends Component {
           src={waterfall}
           alt="Me standing on a log in a creek over a waterall"
           overlay={true}
+          left={-5}
+          header="Home"
+          hleft={50}
+          htop={30}
+          subheader={<span>Welcome to my portfolio site!</span>}
         />
+        <h1>Test</h1>
       </div>
     );
   }
