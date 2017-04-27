@@ -16,7 +16,7 @@ export default class Home extends Component {
           header="Home"
           hleft={50}
           htop={30}
-          subheader={<span>Welcome to my portfolio site!</span>}
+          subheader={<span>Welcome to my portfolio!</span>}
         />
         <h1>Test</h1>
       </div>
