@@ -14,6 +14,9 @@
     text-align: left;
     padding-left: 1em;
     font-size: 1.5em;
+    @include bp-medium {
+      display: none;
+    }
   }
   .nav-links {
     position: absolute;

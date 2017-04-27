@@ -136,6 +136,11 @@ USAGE
   background: -moz-linear-gradient($args); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to $args); /* Standard syntax */
 }
+@mixin flex($args) {
+	-webkit-flex: $args; /* Safari 6.1+ */
+  -ms-flex: $args; /* IE 10 */
+  flex: $args;
+}
 
 %clearfix {
 	*zoom: 1;

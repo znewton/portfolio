@@ -1,8 +1,19 @@
 .HeroImage {
-  position: relative;
+  position: fixed;
+  top: $navbar_height;
+  left: 0;
+  transform: translateX(100vw);
+  z-index: -1;
+  pointer-events: none;
   overflow: hidden;
   width: 100vw;
   height: 50vw;
+  & + * {
+    z-index: 2;
+    margin-top: 45vw;
+    padding-top: 1em;
+    background-color: #ffffff;
+  }
   img {
     position: absolute;
     top: 0;
@@ -41,6 +52,12 @@
     }
   }
   @include bp-medium {
-    // display: none;
+    top: 0;
+    bottom: $navbar_height;
   }
+}
+
+.active .HeroImage{
+  transform: translateX(0);
+  @include transition(transform $slide_duration ease);
 }

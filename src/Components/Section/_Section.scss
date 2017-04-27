@@ -1,5 +1,7 @@
 .Section {
   width: 0;
+  // overflow-y: auto;
+  overflow-y: hidden;
   position: relative;
   min-height: 100vh;
   padding-top: $navbar_height;
@@ -18,11 +20,17 @@
   }
   & > div {
     width: 100vw;
+    height: 100%;
     position: absolute;
+    overflow-y: auto;
     // right: 0;
-    top: $navbar_height;
+    padding-top: $navbar_height;
+    article > *:last-child {
+      padding-bottom: 5em;
+    }
     @include bp-medium {
-      top: 0;
+      padding-top: 0;
+      padding-bottom: $navbar_height;
     }
   }
 }

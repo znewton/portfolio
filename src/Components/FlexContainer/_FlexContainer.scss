@@ -1,0 +1,10 @@
+.FlexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    @include flex(1 30%);
+    @include bp-medium {
+      @include flex(1 100%);
+    }
+  }
+}
