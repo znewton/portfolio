@@ -21,11 +21,17 @@ export default class About extends Component {
         <FlexContainer>
           <Card
             title="Who"
-            content="Front-end Web Developer, Gamer, Cyclist, Yerba Mate enthusiast, puppy lover"
+            content={<ul>
+              <li>Front-end Developer</li>
+              <li>Gamer</li>
+              <li>Cyclist</li>
+              <li>Yerba Mate enthusiast</li>
+              <li>puppy lover</li>
+            </ul>}
           />
           <Card
             title="What"
-            content="ReactJS, Sass, caffeine"
+            content={<ul><li>ReactJS</li><li>Sass</li><li>caffeine</li></ul>}
           />
           <Card
             title="Where"
@@ -33,7 +39,7 @@ export default class About extends Component {
           />
           <Card
             title="Why"
-            content="Making the internet more nicer to look at"
+            content="Make the internet nicer to look at"
           />
           <Card
             title="How"
