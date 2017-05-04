@@ -2,11 +2,25 @@ import React, { Component } from 'react';
 
 export default class Navbar extends Component {
   componentDidMount() {
-    let offset = 0;
-    for (offset = 0; offset < this.props.routes.length; offset++) {
-      if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
+    if(window.addEventListener) {
+      window.addEventListener('hashchange', (e) => {
+        e.preventDefault();
+        let offset = 0;
+        for (offset = 0; offset < this.props.routes.length; offset++) {
+          if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
+        }
+        this.handleRouteChange(offset);
+      });
+      if(window.location.hash) {
+        let offset = 0;
+        for (offset = 0; offset < this.props.routes.length; offset++) {
+          if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
+        }
+        this.handleRouteChange(offset);
+      } else {
+        window.location = '#/';
+      }
     }
-    this.handleRouteChange(offset);
   }
   handleRouteChange(offset) {
     this.refs.navbarSlider.style.left = 100/this.props.routes.length*offset+'%';
@@ -17,7 +31,6 @@ export default class Navbar extends Component {
         <a
           href="#/"
           className="nav-title"
-          onClick={() => this.handleRouteChange(0)}
         >znewton</a>
         <div
           ref="navLinks"
@@ -27,7 +40,6 @@ export default class Navbar extends Component {
             <a
               href={'#'+route.path}
               key={route.path}
-              onClick={() => this.handleRouteChange(i)}
             >{route.label}</a>
           ))}
           <span

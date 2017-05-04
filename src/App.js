@@ -17,6 +17,51 @@ const routes = [
   { path: '/about',    label: 'About',    component: About },
 ];
 
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchend', handleTouchMove, false);
+
+let xDown = null;
+let yDown = null;
+
+function handleTouchStart(evt) {
+  xDown = evt.touches[0].clientX;
+  yDown = evt.touches[0].clientY;
+};
+
+function handleTouchMove(evt) {
+  console.log(evt)
+  if ( ! xDown || ! yDown ) {
+    return;
+  }
+  let xUp = evt.changedTouches[0].clientX;
+  let yUp = evt.changedTouches[0].clientY;
+  let xDiff = xDown - xUp;
+  let yDiff = yDown - yUp;
+  let dir = 0;
+  if ( Math.abs(xDiff) > Math.abs(yDiff) ) {/*side not vertical*/
+    if(Math.abs(xDiff) > window.innerWidth*2/5) {
+      if ( xDiff > 0 ) {
+        /* left swipe */
+        dir = 1;
+      } else {
+        /* right swipe */
+        dir = -1;
+      }
+    }
+  }
+  if(dir) {
+    let i = 0;
+    for(i = 0; i < routes.length; i++)
+      if (routes[i].path == window.location.hash.slice(1)) break;
+    console.log(i);
+    if ((i+dir) >= 0 && (i+dir) < routes.length)
+      window.location = '#'+routes[i+dir].path;
+  }
+  /* reset values */
+  xDown = null;
+  yDown = null;
+};
+
 export default class App extends Component {
   render() {
     return (
