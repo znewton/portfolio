@@ -20,7 +20,7 @@ export default class Section extends Component {
       // this.refs.Section.classList.remove('right');
       // this.refs.Section.classList.remove('left');
     } else {
-      this.refs.Section.scrollTop = 0;
+      this.refs.InnerDiv.scrollTop = 0;
       this.refs.Section.classList.remove('active');
       if(this.props.paths.indexOf(hash.slice(1)) > this.props.paths.indexOf(this.props.path)) {
         this.refs.Section.classList.add('left');
@@ -38,7 +38,7 @@ export default class Section extends Component {
         data-path={'#'+this.props.path}
         className={"Section"+(this.props.active ? ' active' : '')}
       >
-        <div>
+        <div ref="InnerDiv">
           {this.props.children}
         </div>
       </section>
