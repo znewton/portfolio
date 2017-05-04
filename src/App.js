@@ -11,10 +11,10 @@ import Projects from './Pages/Projects/Projects';
 import Resume from './Pages/Resume/Resume';
 
 const routes = [
-  { path: '/', label: 'Home' },
-  { path: '/projects', label: 'Projects' },
-  { path: '/resume', label: 'Resume' },
-  { path: '/about', label: 'About' },
+  { path: '/',         label: 'Home',     component: Home },
+  { path: '/projects', label: 'Projects', component: Projects },
+  { path: '/resume',   label: 'Resume',   component: Resume },
+  { path: '/about',    label: 'About',    component: About },
 ];
 
 export default class App extends Component {
@@ -23,11 +23,16 @@ export default class App extends Component {
       <div className="App">
         <Navbar routes={routes} />
         <SectionWrapper>
-          <Section path="/"><Home /></Section>
-          <Section path="/projects"><Projects /></Section>
-          <Section path="/resume"><Resume /></Section>
-          <Section path="/about"><About /></Section>
-          <Section path="*"><div><h1>404</h1></div></Section>
+          {routes.map((route) => (
+            <Section
+              path={route.path}
+              paths={routes.map(route => route.path)}
+            ><route.component /></Section>
+          ))}
+          <Section
+            path="*"
+            paths={routes.map(route => route.path)}
+          ><div><h1>404</h1></div></Section>
         </SectionWrapper>
       </div>
     );

@@ -2,11 +2,12 @@
   position: fixed;
   top: $navbar_height;
   left: 0;
-  transform: translateX(100vw);
-  z-index: -1;
+  width: 0;
+  z-index: -2;
   pointer-events: none;
   overflow: hidden;
-  width: 100vw;
+  @include transition(width $slide_duration/2 ease, transform $slide_duration ease);
+  // width: 100vw;
   height: 50vw;
   & + * {
     z-index: 2;
@@ -33,6 +34,7 @@
   }
   .hero-header {
     position: absolute;
+    white-space: nowrap;
     display: inline-block;
     text-shadow: 0 0 10px rgba(0,0,0, 0.2);
     h1 {
@@ -57,7 +59,24 @@
   }
 }
 
+.left .HeroImage {
+  transform: translateX(-100vw);
+  img {
+    right: -1vw;
+    left: unset;
+  }
+}
+
+.right .HeroImage {
+  transform: translateX(100vw);
+  img {
+    left: -1vw;
+    right: unset;
+  }
+}
+
 .active .HeroImage{
   transform: translateX(0);
-  @include transition(transform $slide_duration ease);
+  z-index: -1;
+  width: 100vw;
 }
