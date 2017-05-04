@@ -38,7 +38,7 @@ function handleTouchMove(evt) {
   let yDiff = yDown - yUp;
   let dir = 0;
   if ( Math.abs(xDiff) > Math.abs(yDiff) ) {/*side not vertical*/
-    if(Math.abs(xDiff) > window.innerWidth*2/5) {
+    if(Math.abs(xDiff) > window.innerWidth*1/5) {
       if ( xDiff > 0 ) {
         /* left swipe */
         dir = 1;
