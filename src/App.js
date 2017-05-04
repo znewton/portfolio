@@ -29,7 +29,6 @@ function handleTouchStart(evt) {
 };
 
 function handleTouchMove(evt) {
-  console.log(evt)
   if ( ! xDown || ! yDown ) {
     return;
   }
@@ -53,7 +52,6 @@ function handleTouchMove(evt) {
     let i = 0;
     for(i = 0; i < routes.length; i++)
       if (routes[i].path == window.location.hash.slice(1)) break;
-    console.log(i);
     if ((i+dir) >= 0 && (i+dir) < routes.length)
       window.location = '#'+routes[i+dir].path;
   }
