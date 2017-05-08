@@ -4,14 +4,14 @@
   padding: 1em;
   @include box-shadow(2px 3px 5px rgba(0,0,0,0.2), -1px -2px 4px rgba(0,0,0,0.1));
   h2 {
-    color: #44445f;
+    color: $dark_blue;
     margin-bottom: 0.5em;
   }
   h2::after {
     content: "";
     display: block;
     height: 1px;
-    @include linear-gradient(right, lighten(#44445f, 60%), transparent);
+    @include linear-gradient(right, lighten($dark_blue, 60%), transparent);
   }
   p {
     font-size: 1.2em;

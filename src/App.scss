@@ -26,3 +26,13 @@ h3 { font-size: 2em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1.1em; }
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+.fa {
+  color: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+}

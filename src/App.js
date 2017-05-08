@@ -64,7 +64,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar routes={routes} />
+        <Navbar routes={routes.slice(1)} />
         <SectionWrapper>
           {routes.map((route) => (
             <Section

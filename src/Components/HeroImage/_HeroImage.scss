@@ -30,7 +30,7 @@
     height: 100%;
     width: 100%;
     opacity: 0.3;
-    @include linear-gradient(bottom right, #1da1f2, #000000, #1da1f2);
+    @include linear-gradient(bottom right, $blue, #000000, $blue);
   }
   .hero-header {
     position: absolute;

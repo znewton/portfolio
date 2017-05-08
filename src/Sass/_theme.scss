@@ -3,3 +3,7 @@ $slide_duration: 300ms;
 
 $content_font_stack: 'Open Sans', sans-serif;
 $display_font_stack: 'Roboto', sans-serif;
+
+$blue: #1da1f2;
+$dark_blue: desaturate(darken(#1da1f2, 20%), 20%);
+$light_blue: desaturate(lighten(#1da1f2, 20%), 20%) ;

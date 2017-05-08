@@ -1,10 +1,73 @@
 import React, { Component } from 'react';
+import Project from './Project/Project';
+
+import lyricprof from '../../assets/lyricprof.png';
+import cygames from '../../assets/cygames.png';
+import mnewga from '../../assets/mnewga.png';
+
+const projects = [
+  {
+    name: 'LyricProf',
+    description: 'HackISU Spring 2016 project to ease the process of checking a song\'s profanity',
+    link: 'https://lyricprof.znewton.xyz',
+    tags: ['web', 'app', 'javascript', 'css', 'html', 'php'],
+    github: 'https://github.com/znewton/lyricprof',
+    completeness: 1.0,
+    image: lyricprof,
+  },
+  {
+    name: 'CyGames',
+    description: 'A multiplayer game and chat site built for SE 339',
+    link: 'http://cygamez.herokuapp.com',
+    tags: ['web', 'app', 'javascript', 'scss', 'html', 'NodeJS', 'React', 'firebase', 'socket.io'],
+    github: 'https://github.com/znewton/cygames',
+    completeness: 0.7,
+    collaborators: [{name: 'Nick Behrens', link: 'https://nab0310.github.io/'}],
+    image: cygames,
+  },
+  {
+    name: 'MNEWGA Site Redesign',
+    description: (<div>
+      A website redesign for my aunt. Ended up not being used, but it was a fun exercise. <br />
+      Plus, they used my design concepts! <a href="https://www.mnewga.com/">Actual Site</a>
+    </div>),
+    link: 'http://mnewga.znewton.xyz',
+    tags: ['web', 'site', 'javascript', 'css', 'html', 'React'],
+    github: 'http://github.com/znewton/mnewga-Site-Redesign',
+    completeness: 0.9,
+    image: mnewga,
+  },
+  {
+    name: 'uniPrint',
+    description: 'HackISU Spring 2017 project that fell apart very quickly on day 2. Will be revisited soon.',
+    tags: ['web', 'app', 'typescript', 'Angular', 'css', 'Angular Material', 'firebase'],
+    github: 'http://github.com/znewton/uniPrint',
+    completeness: 0.1,
+    collaborators: [
+      {name: 'Tristan Duyvejonck', link: 'https://duyve.com/'},
+      {name: 'Micheal Phippen', link: 'https://phippen.github.io/'},
+      {name: 'Cole Mulligan', link: 'https://github.com/cmulligan7'},
+    ],
+    image: '',
+  }
+];
 
 export default class Projects extends Component {
   render() {
     return (
       <div className="Projects">
-        <h1>Projects</h1>
+        {projects.map((project) => (
+          <Project key={project.name}
+            name={project.name}
+            description={project.description}
+            link={project.link}
+            tags={project.tags}
+            github={project.github}
+            completeness={project.completeness}
+            collaborators={project.collaborators}
+            image={project.image}
+          />
+        ))}
       </div>
     );
   }

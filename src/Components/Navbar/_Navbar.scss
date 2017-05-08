@@ -30,7 +30,7 @@
   }
   a {
     display: inline-block;
-    color: #3a3a6a;
+    color: $dark_blue;
     padding: 0 1em;
     text-align: center;
     text-decoration: none;
@@ -39,7 +39,7 @@
   }
   #navbar-slider {
     display: block;
-    background-color: #1da1f2;
+    background-color: $blue;
     height: $navbar_height/7;
     position: absolute;
     bottom: 0;
