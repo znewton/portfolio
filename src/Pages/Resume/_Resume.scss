@@ -1,2 +1,250 @@
 .Resume {
+    /**
+  Name bigger
+  spread out more for less white space
+  action words in activities
+  past tense for experiences
+  get rid of bottom line
+  */
+  * {
+    overflow-x: unset;
+  }
+  font-size: 1em;
+  width: 90vw;
+  /*height: 900px;*/
+  overflow: hidden;
+  background: white;
+  margin: 8px auto;
+  box-shadow: 2px 2px 5px #999, -1px -1px 5px #aaa;
+
+  @media screen and (max-width: 800px){
+    font-size: 2.1vw;
+    width: 98vw;
+
+    box-shadow: 0.7vw 0.7vw 2vw #999, -0.5vw -0.5vw 2vw #aaa;
+  }
+  @media screen and (max-device-width: 800px){
+    font-size: 2.1vw;
+    width: 98vw;
+
+    box-shadow: 0.7vw 0.7vw 2vw #999, -0.5vw -0.5vw 2vw #aaa;
+  }
+  @media print {
+    #site-navbar{
+      display: none !important;
+    }
+    .container{
+      padding: 0 !important;
+    }
+    #resume {
+      display: block !important;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      overflow: unset;
+      box-shadow: none;
+    }
+    body{
+      background: #fff !important;
+    }
+    a{
+      color: #444;
+      text-decoration: none;
+    }
+    #utility-buttons{
+      display: none;
+    }
+  }
+
+  & > div {
+    width: 100%;
+    position: relative;
+    padding: 8px 8px 3px 8px;
+  }
+  & > div:not(:last-child):after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    height: 1px;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(transparent));
+    background-image: -webkit-linear-gradient(left, #000, transparent);
+    background-image: -moz-linear-gradient(left, #000, transparent);
+    background-image: -o-linear-gradient(left, #000, transparent);
+  }
+
+  .section_header {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.5em;
+    font-weight:600;
+    color: #666;
+    width: 20%;
+  }
+  .section_content {
+    width: 70%;
+    display: inline-block;
+  }
+
+  #contact_info #basic_info{
+    position:relative;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 66%;
+  }
+  #contact_info #basic_contact{
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    margin-right: 8px;
+  }
+  #name {
+    font-size: 2.3em;
+    font-weight: 600;
+  }
+  @media screen and (max-width: 800px){
+
+    .section_header {
+      font-size: 3.5vw;
+    }
+
+    #contact_info #basic_contact{
+      position: relative;
+      display: inline-block;
+      width: 30%;
+      text-align: left;
+      margin-right: 1vw;
+    }
+    #name {
+      font-size: 5.2vw;
+      font-weight: 600;
+    }
+  }
+  @media screen and (max-device-width: 800px){
+
+    .section_header {
+      font-size: 3.5vw;
+    }
+
+    #contact_info #basic_contact{
+      position: relative;
+      display: inline-block;
+      width: 30%;
+      text-align: left;
+      margin-right: 1vw;
+    }
+    #name {
+      font-size: 5.2vw;
+      font-weight: 600;
+    }
+  }
+
+  #contact_info #basic_contact > div{
+      display: block;
+  }
+  #basic_contact > div:before{
+    margin-right: 5px;
+    font-family: FontAwesome;
+  }
+
+  #basic_contact > div:not(:last-child):after,
+  #other_contact > div:not(:last-child):after{
+  }
+
+  #permanent_address:before,
+  #current_address:before {
+    margin-right: 5px;
+    font-family: FontAwesome;
+  }
+  #permanent_address:before{
+    content: '\f023';
+  }
+  #current_address:before {
+    content: '\f13e';
+  }
+
+  #phone:before{
+    content: '\f095';
+  }
+  #email:before{
+    content: '\f0e0';
+  }
+  #GitHub:before{
+    content: '\f09b';
+  }
+  #LinkedIn:before{
+    content: '\f0e1';
+  }
+  #portfolio:before{
+    content: '\f0c1';
+  }
+
+
+  #education #high_school {
+    display: none;
+  }
+
+  #skills .section_content > div {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+  }
+  #skills .list_header {
+    vertical-align: top;
+    font-weight: 600;
+    width: 100%;
+    color: #888;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  ul > li {
+    display: inline-block;
+    width: 100%;
+  }
+  ul > li:before{
+    font-family: FontAwesome;
+    font-size: 8px;
+    vertical-align: 50%;
+    color: #555;
+    content: '\f0c8';
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  #experience .company_name,
+  #activities .event_name{
+    display: inline-block;
+    padding-right: 5px;
+    border-right: 1px solid #444;
+    font-weight: 600;
+  }
+  #experience .position{
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: 600;
+  }
+  #experience .time_period,
+  #activities .dates {
+    /*display: inline-block;*/
+    font-weight: 600;
+    color: #888;
+    /*text-align: right;*/
+  }
+  #experience div, #experience li{
+    margin-bottom: 5px;
+  }
+  #experience .section_content,
+  #skills .section_content,
+  #activities .section_content,
+  #honors .section_content{
+    padding-top: 7px;
+  }
 }
