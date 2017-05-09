@@ -4,7 +4,14 @@ export default class Education extends Component {
   render() {
     return (
       <div className="Education">
-        Education
+        <div className="institution-name">{this.props.name}</div>
+        <div className="location">{this.props.city}, {this.props.state}</div>
+        <div className="time-period">
+          {this.props.start_date+' - '
+            +(this.props.end_date || 'present')}
+        </div>
+        <div className="earned">{this.props.earned}</div>
+        <div className="gpa">{this.props.gpa}</div>
       </div>
     );
   }

@@ -4,7 +4,19 @@ export default class Activity extends Component {
   render() {
     return (
       <div className="Activity">
-        Activity
+        <div className="name">{this.props.name}</div>
+        <div className="dates">
+          {this.props.dates.map((date, i) => (
+            <span key={i}>{date}</span>
+          ))}
+        </div>
+        <ul className="actions">
+          {this.props.actions.map((action, i) => (
+            <li key={i}>
+              {action.description} <span className="action-date">{action.date}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }

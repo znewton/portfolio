@@ -4,7 +4,17 @@ export default class Experience extends Component {
   render() {
     return (
       <div className="Experience">
-        Experience
+        <div className="company-name">{this.props.company_name}</div>
+        <div className="position">{this.props.position}</div>
+        <div className="time-period">
+          {this.props.start_date+' - '
+            +(this.props.end_date || 'present')}
+        </div>
+        <ul className="actions">
+          {this.props.actions.map((action, i) => (
+            <li key={i}>{action}</li>
+          ))}
+        </ul>
       </div>
     );
   }

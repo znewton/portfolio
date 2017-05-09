@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import data from './Resume.data';
 
+import FlexContainer from '../../Components/FlexContainer/FlexContainer';
+
 import Education from './Education/Education';
 import Skill from './Skill/Skill';
 import Experience from './Experience/Experience';
@@ -54,12 +56,14 @@ export default class Resume extends Component {
         </div>
 
         <div id="skills">
+          <FlexContainer>
           {Object.keys(data.skills).map((skill, i) => (
             <Skill key={i}
               title={skill.charAt(0).toUpperCase() + skill.slice(1)}
               skills={data.skills[skill]}
             />
           ))}
+          </FlexContainer>
         </div>
 
         <div id="experiences">

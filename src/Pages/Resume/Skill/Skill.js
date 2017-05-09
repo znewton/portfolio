@@ -4,7 +4,12 @@ export default class Skill extends Component {
   render() {
     return (
       <div className="Skill">
-        Skill
+        <div className="title">{this.props.title}</div>
+        <ul className="skills">
+          {this.props.skills.map((skill, i) => (
+            <li key={i}>{skill}</li>
+          ))}
+        </ul>
       </div>
     );
   }
