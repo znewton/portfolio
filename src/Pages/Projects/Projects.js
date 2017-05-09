@@ -4,6 +4,7 @@ import Project from './Project/Project';
 import lyricprof from '../../assets/lyricprof.png';
 import cygames from '../../assets/cygames.png';
 import mnewga from '../../assets/mnewga.png';
+import beer from '../../assets/beer.png';
 
 const projects = [
   {
@@ -33,15 +34,23 @@ const projects = [
     </div>),
     link: 'http://mnewga.znewton.xyz',
     tags: ['web', 'site', 'javascript', 'css', 'html', 'React'],
-    github: 'http://github.com/znewton/mnewga-Site-Redesign',
+    github: 'https://github.com/znewton/mnewga-Site-Redesign',
     completeness: 0.9,
     image: mnewga,
+  },
+  {
+    name: 'Beer',
+    description: 'A simple website for my dad to use to show what beer he has (he always supplies the beer) at family gatherings.',
+    tags: ['web', 'site', 'javascript', 'html', 'css'],
+    github: 'https://github.com/znewton/beer',
+    completeness: 0.9,
+    image: beer,
   },
   {
     name: 'uniPrint',
     description: 'HackISU Spring 2017 project that fell apart very quickly on day 2. Will be revisited soon.',
     tags: ['web', 'app', 'typescript', 'Angular', 'css', 'Angular Material', 'firebase'],
-    github: 'http://github.com/znewton/uniPrint',
+    github: 'https://github.com/znewton/uniPrint',
     completeness: 0.1,
     collaborators: [
       {name: 'Tristan Duyvejonck', link: 'https://duyve.com/'},
