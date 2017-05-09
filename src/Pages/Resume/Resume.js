@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import data from './Resume.data';
 
 export default class Resume extends Component {
   render() {

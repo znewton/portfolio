@@ -1,0 +1,36 @@
+module.exports = {
+  contact_info: {
+    name: 'Zachary S. Newton',
+    permanent_address: '3734 Edmund Blvd, Minneapolis, MN',
+    current_address: '2922 West St., Unit 4, Ames, IA',
+    phone: '(612)275-9524',
+    email: 'znewton@iastate.edu',
+    github: 'znewton',
+    portfolio: 'portfolio.znewton.xyz',
+  },
+  objective: 'Looking for an internship for Summer 2018',
+  education: [
+    { // high school
+      name: 'Minnehaha Academy',
+      city: 'Minneapolis',
+      state: 'MN',
+      start_month: 'August',
+      start_year: '2011',
+      end_month: 'May',
+      end_year: '2015',
+      earned: 'High School Diploma',
+      gpa: '3.93/4.00',
+    },
+    { // university
+      name: 'Iowa State University',
+      city: 'Ames',
+      state: 'IA',
+      start_month: 'August',
+      start_year: '2015',
+      end_month: 'May',
+      end_year: '2019',
+      earned: 'BS in Software Engineering',
+      gpa: '3.50/4.00',
+    },
+  ],
+}
