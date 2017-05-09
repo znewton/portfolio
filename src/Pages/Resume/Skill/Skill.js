@@ -9,3 +9,13 @@ export default class Skill extends Component {
     );
   }
 }
+
+Skill.propTypes = {
+  title: React.PropTypes.string,
+  skills: React.PropTypes.arrayOf(React.PropTypes.string),
+};
+
+Skill.defaultProps = {
+  title: '',
+  skills: [],
+};

@@ -9,3 +9,18 @@ export default class Activity extends Component {
     );
   }
 }
+
+Activity.propTypes = {
+  name: React.PropTypes.string,
+  dates: React.PropTypes.arrayOf(React.PropTypes.string),
+  actions: React.PropTypes.arrayOf(React.PropTypes.shape({
+    description: React.PropTypes.string,
+    date: React.PropTypes.string,
+  })),
+};
+
+Activity.defaultProps = {
+  name: '',
+  dates: [],
+  actions: [],
+};

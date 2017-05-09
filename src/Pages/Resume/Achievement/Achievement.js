@@ -9,3 +9,13 @@ export default class Achievement extends Component {
     );
   }
 }
+
+Achievement.propTypes = {
+  name: React.PropTypes.string,
+  dates: React.PropTypes.arrayOf(React.PropTypes.string),
+};
+
+Achievement.defaultProps = {
+  name: '',
+  dates: [],
+};
