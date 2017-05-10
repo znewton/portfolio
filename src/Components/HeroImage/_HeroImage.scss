@@ -21,7 +21,7 @@
     left: -1vw;
     width: 102vw;
     height: auto;
-    @include filter(blur(2px) saturate(50%));
+    @include filter(blur(3px) saturate(50%));
   }
   .hero-overlay {
     position: absolute;
