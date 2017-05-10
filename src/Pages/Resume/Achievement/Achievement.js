@@ -4,11 +4,11 @@ export default class Achievement extends Component {
   render() {
     return (
       <div className="Achievement">
-        {this.props.name} <span className="dates">(
+        {this.props.name} <span className="dates">(&nbsp;
           {this.props.dates.map((date, i) => (
             <span key={i}>{date}</span>
           ))}
-        )</span>
+        &nbsp;)</span>
       </div>
     );
   }

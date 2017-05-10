@@ -1,3 +1,22 @@
 .Achievement {
-  
+  line-height: 1.6em;
+  &::before {
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+    height: 1.1em;
+    width: 0.55em;
+    margin: 0 0.6em 0 0.3em;
+    background-color: $blue;
+    @include box-shadow(3px 0 5px -1px rgba($blue, 0.7));
+    transform: skew(20deg);
+  }
+  .dates {
+    color: #888;
+    span:not(:last-of-type) {
+      &::after {
+        content: ', ';
+      }
+    }
+  }
 }

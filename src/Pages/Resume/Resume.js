@@ -118,7 +118,7 @@ export default class Resume extends Component {
         </div>
 
         <div id="achievements">
-          <div className="section-header">Achievements</div>
+          <div className="section-header">Honors/<br/>Awards</div>
           <div className="section-content">
             {data.achievements.map((achievement, i) => (
               <Achievement key={i}
