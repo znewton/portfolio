@@ -60,6 +60,7 @@ const config = {
       title: 'Portfolio',
       minify: false,
       template: PUBLIC_DIR+'/index.html',
+			favicon: PUBLIC_DIR+'/favicon.ico'
     })
 	]
 };
