@@ -36,3 +36,12 @@ a {
   font-size: inherit;
   vertical-align: middle;
 }
+
+@media print {
+  * {
+    visibility: hidden;
+  }
+  .Section > div, .Section > div * {
+    visibility: visible;
+  }
+}
