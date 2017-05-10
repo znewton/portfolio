@@ -6,7 +6,7 @@
   height: 100vh;
   z-index: 1;
   transform: translateX(0);
-  overflow-x: hidden;
+  overflow: hidden;
   transition-delay: 50ms;
   @include transition(transform $slide_duration ease);
 }
