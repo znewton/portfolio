@@ -59,17 +59,19 @@ export default class Resume extends Component {
         <div id="educations">
           <div className="section-header">Education</div>
           <div className="section-content">
-            {data.educations.map((education, i) => (
-              <Education key={i}
-                name={education.name}
-                city={education.city}
-                state={education.state}
-                start_date={education.start_month+' '+education.start_year}
-                end_date={education.end_month+' '+education.end_year}
-                earned={education.earned}
-                gpa={education.gpa}
-              />
-            ))}
+            <FlexContainer cols={(data.educations.length % 2) ? 1 : 2}>
+              {data.educations.map((education, i) => (
+                <Education key={i}
+                  name={education.name}
+                  city={education.city}
+                  state={education.state}
+                  start_date={education.start_month+' '+education.start_year}
+                  end_date={education.end_month+' '+education.end_year}
+                  earned={education.earned}
+                  gpa={education.gpa}
+                />
+              ))}
+            </FlexContainer>
           </div>
         </div>
 

@@ -7,34 +7,38 @@
 .Resume {
   width: 80vw;
   margin: 1vw auto;
-  & > * + * > .section-content,
-  & > *:first-of-type + * > .section-header,
-  & > * + * > *{
-    border-top: 1px solid $light_blue;
+  .fa {
+    vertical-align: bottom;
+  }
+  & > * + * > .section-content {
+    padding-top: 1em;
+    @include angle-edge(topright, 1deg);
+  }
+  & > * + * > .section-header{
+    padding-top: 0.5em;
+    @include angle-edge(topleft, 1.5deg);
   }
   & > * + * {
     display: flex;
     flex-wrap: nowrap;
   }
-  & > * + * > * {
-    padding-top: 5px;
-  }
   .section-header {
     @include flex(1);
     min-height: 3em;
     font-size: 1.5em;
+    font-weight: 600;
     color: $dark_blue;
   }
   .section-content {
     @include flex(6);
-    padding-bottom: 1em;
+    padding-bottom: 2em;
   }
 }
 
 #contact-info {
   display: flex;
   flex-wrap: nowrap;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   * {
     line-height: 1.4em;
   }
@@ -46,6 +50,7 @@
   }
   .name {
     font-size: 2.5em;
+    font-weight: 600;
     line-height: 1.5em;
     color: $dark_blue;
   }

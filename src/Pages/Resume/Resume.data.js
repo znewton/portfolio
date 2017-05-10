@@ -49,7 +49,7 @@ module.exports = {
       { name: 'MySQL',        competency: 3 },
     ],
     software: [
-      { name: 'Ubuntu Linux',       competency: 4 },
+      { name: 'Ubuntu Linux',       competency: 5 },
       { name: 'Adobe Illustrator',  competency: 4 },
       { name: 'Adobe Photoshop',    competency: 3 },
       { name: 'Blender 3D',         competency: 4 },

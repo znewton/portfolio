@@ -1,8 +1,19 @@
 .FlexContainer {
   display: flex;
   flex-wrap: wrap;
+  &.cols-1 > * {
+    @include flex(1 100%);
+  }
+  &.cols-2 > * {
+    @include flex(1 50%);
+  }
+  &.cols-3 > * {
+    @include flex(1 33%);
+  }
+  &.cols-4 > * {
+    @include flex(1 25%);
+  }
   & > * {
-    @include flex(1 30%);
     @include bp-medium {
       @include flex(1 100%);
     }
