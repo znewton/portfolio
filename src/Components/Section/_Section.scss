@@ -43,8 +43,10 @@
     bottom: 0;
     overflow-y: hidden;
     @include bp-medium {
+      padding-top: 0;
       padding-bottom: $navbar_height;
     }
+    padding-bottom: 0;
     padding-top: $navbar_height;
     article > *:last-child {
       padding-bottom: 2em;
