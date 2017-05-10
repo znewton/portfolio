@@ -20,7 +20,7 @@
   }
   & > * + * {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   .section-header {
     @include flex(1);
@@ -28,10 +28,20 @@
     font-size: 1.5em;
     font-weight: 600;
     color: $dark_blue;
+    @include bp-large {
+      @include flex(1 100%);
+    }
   }
   .section-content {
     @include flex(6);
     padding-bottom: 2em;
+    @include bp-large {
+      @include flex(1 100%);
+      &::before, &::after {
+        content: none;
+      }
+      padding-top: 0;
+    }
   }
 }
 
@@ -44,9 +54,16 @@
   }
   .left {
     @include flex(6);
+    @include bp-large {
+      @include flex(3);
+    }
   }
   .right {
     @include flex(1);
+    @include bp-large {
+      padding-top: 1em;
+      @include flex(2);
+    }
   }
   .name {
     font-size: 2.5em;

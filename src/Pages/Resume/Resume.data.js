@@ -10,6 +10,17 @@ module.exports = {
   },
   objective: 'Looking for an internship for Summer 2018',
   educations: [
+    { // university
+      name: 'Iowa State University',
+      city: 'Ames',
+      state: 'IA',
+      start_month: 'August',
+      start_year: '2015',
+      end_month: 'December',
+      end_year: '2018',
+      earned: 'BS in Software Engineering',
+      gpa: '3.50/4.00',
+    },
     { // high school
       name: 'Minnehaha Academy',
       city: 'Minneapolis',
@@ -20,17 +31,6 @@ module.exports = {
       end_year: '2015',
       earned: 'High School Diploma',
       gpa: '3.93/4.00',
-    },
-    { // university
-      name: 'Iowa State University',
-      city: 'Ames',
-      state: 'IA',
-      start_month: 'August',
-      start_year: '2015',
-      end_month: 'May',
-      end_year: '2019',
-      earned: 'BS in Software Engineering',
-      gpa: '3.50/4.00',
     },
   ],
   skills: {

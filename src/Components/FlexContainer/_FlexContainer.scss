@@ -3,18 +3,25 @@
   flex-wrap: wrap;
   &.cols-1 > * {
     @include flex(1 100%);
+    @include bp-large {
+      @include flex(1 100%);
+    }
   }
   &.cols-2 > * {
     @include flex(1 50%);
+    @include bp-large {
+      @include flex(1 100%);
+    }
   }
   &.cols-3 > * {
     @include flex(1 33%);
+    @include bp-large {
+      @include flex(1 100%);
+    }
   }
   &.cols-4 > * {
     @include flex(1 25%);
-  }
-  & > * {
-    @include bp-medium {
+    @include bp-large {
       @include flex(1 100%);
     }
   }
