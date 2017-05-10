@@ -90,9 +90,9 @@ export default class Resume extends Component {
         </div>
 
         <div id="experiences">
-          <div className="section-header">Experiences</div>
+          <div className="section-header">Experience</div>
           <div className="section-content">
-            {data.experiences.map((experience, i) => (
+            {data.experiences.slice(0,-1).map((experience, i) => (
               <Experience key={i}
                 company_name={experience.company_name}
                 position={experience.position}

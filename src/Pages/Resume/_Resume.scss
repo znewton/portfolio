@@ -17,6 +17,9 @@
   & > * + * > .section-header{
     padding-top: 0.5em;
     @include angle-edge(topleft, 1.5deg);
+    @include bp-large {
+      @include angle-edge(topleft, 0.5deg);
+    }
   }
   & > * + * {
     display: flex;
@@ -43,6 +46,12 @@
       padding-top: 0;
     }
   }
+  @include bp-medium {
+    width: 95vw;
+  }
+  @media print {
+    width: 95vw;
+  }
 }
 
 #contact-info {
@@ -59,7 +68,7 @@
     }
   }
   .right {
-    @include flex(1);
+    @include flex(2);
     @include bp-large {
       padding-top: 1em;
       @include flex(2);

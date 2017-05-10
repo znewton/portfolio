@@ -65,7 +65,9 @@ module.exports = {
       end_month: 'August',
       end_year: '2017',
       actions: [
-        'tbd', 'tbd', 'tbd',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac.',
       ],
     },
     {
