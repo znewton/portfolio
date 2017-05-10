@@ -4,13 +4,16 @@
   top: 0;
   left: 0;
   z-index: 2;
-  overflow: hidden;
   height: $navbar_height;
   line-height: $navbar_height;
+  vertical-align: top;
   background-color: #fafafa;
   @include box-shadow(0 1px 10px rgba(0,0,0,0.2));
   .nav-title {
     display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
     text-align: left;
     padding-left: 1em;
     font-size: 1.5em;
@@ -20,6 +23,7 @@
   }
   .nav-links {
     position: absolute;
+    height: $navbar_height;
     top: 0;
     right: 0;
     width: 33vw;
@@ -43,7 +47,9 @@
     height: $navbar_height/7;
     position: absolute;
     bottom: 0;
+    pointer-events: none;
     @include transition(left $slide_duration ease);
+    @include box-shadow(0 4px 8px -2px $blue);
     @include bp-medium {
       bottom: unset;
       top: 0;

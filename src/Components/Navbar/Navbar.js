@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 
+let offset = 0;
 export default class Navbar extends Component {
   componentDidMount() {
     if(window.addEventListener) {
       window.addEventListener('hashchange', (e) => {
         e.preventDefault();
-        let offset = 0;
         for (offset = 0; offset < this.props.routes.length; offset++) {
           if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
         }
-        this.handleRouteChange(offset);
+        this.handleRouteChange();
       });
       if(window.location.hash) {
-        let offset = 0;
         for (offset = 0; offset < this.props.routes.length; offset++) {
           if(this.props.routes[offset].path === window.location.hash.slice(1)) break;
         }
-        this.handleRouteChange(offset);
+        this.handleRouteChange();
       } else {
         window.location = '#/';
       }
     }
   }
-  handleRouteChange(offset) {
+  handleRouteChange() {
     this.refs.navbarSlider.style.left = 100/this.props.routes.length*offset+'%';
+  }
+  handleMouseEnter(evt) {
+    this.refs.navbarSlider.style.left = evt.target.offsetLeft+'px';
   }
   render() {
     return (
@@ -40,6 +42,8 @@ export default class Navbar extends Component {
             <a
               href={'#'+route.path}
               key={route.path}
+              onMouseEnter={this.handleMouseEnter.bind(this)}
+              onMouseLeave={this.handleRouteChange.bind(this)}
             >{route.label}</a>
           ))}
           <span

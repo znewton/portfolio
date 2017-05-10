@@ -82,9 +82,12 @@
     }
     a {
       display: block;
-      @include transition(background-color 125ms ease);
+      @include box-shadow(0 4px 8px -2px transparent);
+      @include transition(background-color 125ms ease, color 125ms ease, box-shadow 125ms ease);
       &:hover {
-        background-color: #ddd;
+        color: #fff;
+        @include box-shadow(0 4px 8px -2px rgba($blue, 0.7));
+        background-color: $blue;
       }
     }
     & > div + div {
