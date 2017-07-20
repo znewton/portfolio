@@ -8,7 +8,7 @@ module.exports = {
     github: 'znewton',
     portfolio: 'portfolio.znewton.xyz',
   },
-  objective: 'Looking for an internship for Summer 2018',
+  objective: 'Looking for an software development internship for Summer 2018',
   educations: [
     { // university
       name: 'Iowa State University',
@@ -35,11 +35,11 @@ module.exports = {
   ],
   skills: {
     languages: [
-      { name: 'JavaScript',   competency: 5 },
-      { name: 'PHP',          competency: 5 },
-      { name: 'Java',         competency: 4 },
-      { name: 'HTML/CSS',     competency: 5 },
-      { name: 'SCSS',         competency: 4 },
+      { name: 'JavaScript',     competency: 5 },
+      { name: 'Dart',           competency: 5 },
+      { name: 'Java',           competency: 4 },
+      { name: 'SASS',           competency: 5 },
+      { name: 'PHP',            competency: 4 },
     ],
     frameworks: [
       { name: 'React',        competency: 5 },
@@ -50,8 +50,8 @@ module.exports = {
     ],
     software: [
       { name: 'Ubuntu Linux',       competency: 5 },
-      { name: 'Adobe Illustrator',  competency: 4 },
-      { name: 'Adobe Photoshop',    competency: 3 },
+      { name: 'Illustrator',        competency: 4 },
+      { name: 'Photoshop',          competency: 3 },
       { name: 'Blender 3D',         competency: 4 },
       { name: 'MS Office',          competency: 4 },
     ],
@@ -59,15 +59,15 @@ module.exports = {
   experiences: [
     {
       company_name: 'Workiva',
-      position: 'Front-end Developer Intern',
+      position: 'Software Development Intern',
       start_month: 'May',
       start_year: '2017',
       end_month: 'August',
       end_year: '2017',
       actions: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac.',
+        'Implemented new features for Workiva\'s product, Wdesk',
+        'Scaled existing Wdesk features to allow for 10x-ing',
+        'Contributed creative solitions to UI/UX problems presented by new features',
       ],
     },
     {
@@ -123,7 +123,7 @@ module.exports = {
           date: 'Fall 2016',
         },
         {
-          description: 'Tried to build a web app to create a 3D prionting economy at ISU',
+          description: 'Tried to build a web app to create a 3D printing economy at ISU',
           date: 'Spring 2016',
         },
       ],
@@ -133,17 +133,21 @@ module.exports = {
       dates: ['ongoing'],
       actions: [
         {
+          description: 'Pieced together a 2D game engine in Java from scratch',
+          date: '2015',
+        },
+        // {
+        //   description: 'Threw together a beer inventory site for my dad for family get-togethers',
+        //   date: 'November 2016',
+        // },
+        {
           description: 'Redesigned a website for my aunt\'s golf club (MNEWGA)',
           date: 'December 2016',
         },
         {
-          description: 'Threw together a beer inventory site for my dad for family get-togethers',
-          date: 'November 2016',
-        },
-        {
-          description: 'Built a 2D game engine in Java from scratch',
-          date: '2015',
-        },
+          description: 'Built a web app to combine YouTube playlists from multiple channels',
+          date: 'July 2017'
+        }
       ],
     },
   ],

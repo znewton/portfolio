@@ -49,14 +49,14 @@ export default class Resume extends Component {
           </div>
         </div>
 
-        <div id="objective">
+        <section id="objective">
           <div className="section-header">Objective</div>
           <div className="section-content">
             {data.objective}
           </div>
-        </div>
+        </section>
 
-        <div id="educations">
+        <section id="educations">
           <div className="section-header">Education</div>
           <div className="section-content">
             <FlexContainer cols={(data.educations.length % 2) ? 1 : 2}>
@@ -73,9 +73,9 @@ export default class Resume extends Component {
               ))}
             </FlexContainer>
           </div>
-        </div>
+        </section>
 
-        <div id="skills">
+        <section id="skills">
           <div className="section-header">Skills</div>
           <div className="section-content">
             <FlexContainer>
@@ -87,9 +87,9 @@ export default class Resume extends Component {
             ))}
             </FlexContainer>
           </div>
-        </div>
+        </section>
 
-        <div id="experiences">
+        <section id="experiences">
           <div className="section-header">Experience</div>
           <div className="section-content">
             {data.experiences.slice(0,-1).map((experience, i) => (
@@ -102,9 +102,9 @@ export default class Resume extends Component {
               />
             ))}
           </div>
-        </div>
+        </section>
 
-        <div id="activities">
+        <section id="activities">
           <div className="section-header">Activities</div>
           <div className="section-content">
             {data.activities.map((activity, i) => (
@@ -115,9 +115,9 @@ export default class Resume extends Component {
               />
             ))}
           </div>
-        </div>
+        </section>
 
-        <div id="achievements">
+        <section id="achievements">
           <div className="section-header">Honors/<br/>Awards</div>
           <div className="section-content">
             {data.achievements.map((achievement, i) => (
@@ -127,7 +127,7 @@ export default class Resume extends Component {
               />
             ))}
           </div>
-        </div>
+        </section>
       </div>
     );
   }

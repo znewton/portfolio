@@ -13,7 +13,7 @@ export default class Activity extends Component {
           </div>
         </div>
         <ul className="actions">
-          {this.props.actions.map((action, i) => (
+          {this.props.actions.reverse().map((action, i) => (
             <li key={i}>
               {action.description} <span className="action-date">( {action.date} )</span>
             </li>

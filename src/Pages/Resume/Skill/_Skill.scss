@@ -13,8 +13,13 @@
       .name {
         position: absolute;
         left: 0;
+        width: 40%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
       .competency {
+        text-align: right;
         position: absolute;
         right: 5em;
       }
@@ -23,11 +28,14 @@
   .bar {
     display: inline-block;
     height: 1.6em;
-    width: 1em;
+    width: 1.2vw;
     margin-left: 0.4em;
     background-color: transparent;
     border: 1px solid #ccc;
     transform: skew(20deg);
+    @include bp-large {
+      width: 1em;
+    }
     &.filled {
       background-color: $blue;
       border-color: $blue;
