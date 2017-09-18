@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import myxx from '../../assets/myxx.PNG';
+import myx from '../../assets/Myx.PNG';
 import lyricprof from '../../assets/lyricprof.png';
 import cygames from '../../assets/cygames.png';
 import mnewga from '../../assets/mnewga.png';
@@ -8,13 +8,13 @@ import beer from '../../assets/beer.png';
 
 module.exports = [
   {
-    name: 'myxx',
+    name: 'myx',
     description: 'Personal project to ease the process of combining YouTube playlists.',
     link: 'https://myxx.znewton.xyz',
     tags: ['web', 'app', 'javascript', 'scss', 'html', 'React', 'NodeJS', 'firebase'],
     github: 'https://github.com/znewton/myxx-client',
     completeness: 1.0,
-    image: myxx,
+    image: myx,
   },
   {
     name: 'LyricProf',
