@@ -8,7 +8,7 @@ module.exports = {
     github: 'znewton',
     portfolio: 'portfolio.znewton.xyz',
   },
-  objective: 'Looking for an software development internship for Summer 2018',
+  objective: 'Looking for a software engineering internship for Summer 2018',
   educations: [
     { // university
       name: 'Iowa State University',
@@ -19,7 +19,7 @@ module.exports = {
       end_month: 'December',
       end_year: '2018',
       earned: 'BS in Software Engineering',
-      gpa: '3.50/4.00',
+      gpa: '3.55/4.00',
     },
     { // high school
       name: 'Minnehaha Academy',
@@ -59,15 +59,15 @@ module.exports = {
   experiences: [
     {
       company_name: 'Workiva',
-      position: 'Software Development Intern',
+      position: 'Software Engineering Intern',
       start_month: 'May',
       start_year: '2017',
       end_month: 'August',
       end_year: '2017',
       actions: [
-        'Implemented new features for Workiva\'s product, Wdesk',
-        'Scaled existing Wdesk features to allow for 10x-ing',
-        'Contributed creative solitions to UI/UX problems presented by new features',
+        'Implemented new client-side features for Workiva\'s product, Wdesk',
+        'Scaled existing product features to allow for 10x-ing',
+        'Contributed creative solutions to UI/UX problems presented by new functionalities',
       ],
     },
     {

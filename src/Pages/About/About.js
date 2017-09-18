@@ -26,12 +26,12 @@ export default class About extends Component {
               <li>Gamer</li>
               <li>Cyclist</li>
               <li>Yerba Mate enthusiast</li>
-              <li>puppy lover</li>
+              <li>Dog lover</li>
             </ul>}
           />
           <Card
             title="What"
-            content={<ul><li>ReactJS</li><li>Sass</li><li>caffeine</li></ul>}
+            content={<ul><li>React</li><li>Sass</li><li>caffeine</li></ul>}
           />
           <Card
             title="Where"
@@ -39,7 +39,7 @@ export default class About extends Component {
           />
           <Card
             title="Why"
-            content="Make the internet nicer to look at"
+            content="Make the internet better"
           />
           <Card
             title="How"
