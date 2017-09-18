@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class FlexContainer extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class FlexContainer extends Component {
 }
 
 FlexContainer.propTypes = {
-  cols: React.PropTypes.number,
+  cols: PropTypes.number,
 };
 
 FlexContainer.defaultProps = {

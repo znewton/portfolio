@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Activity extends Component {
   render() {
@@ -25,11 +26,11 @@ export default class Activity extends Component {
 }
 
 Activity.propTypes = {
-  name: React.PropTypes.string,
-  dates: React.PropTypes.arrayOf(React.PropTypes.string),
-  actions: React.PropTypes.arrayOf(React.PropTypes.shape({
-    description: React.PropTypes.string,
-    date: React.PropTypes.string,
+  name: PropTypes.string,
+  dates: PropTypes.arrayOf(PropTypes.string),
+  actions: PropTypes.arrayOf(PropTypes.shape({
+    description: PropTypes.string,
+    date: PropTypes.string,
   })),
 };
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Card extends Component {
   render() {
@@ -12,12 +13,12 @@ export default class Card extends Component {
 }
 
 Card.propTypes = {
-  title: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ]),
-  content: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  content: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ]),
 }

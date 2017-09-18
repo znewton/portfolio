@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Project extends Component {
   render() {
@@ -55,20 +56,20 @@ export default class Project extends Component {
 }
 
 Project.propTypes = {
-  name: React.PropTypes.string,
-  description: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  name: PropTypes.string,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ]),
-  link: React.PropTypes.string,
-  tags: React.PropTypes.arrayOf(React.PropTypes.string),
-  github: React.PropTypes.string,
-  completeness: React.PropTypes.number,
-  collaborators: React.PropTypes.arrayOf(React.PropTypes.shape({
-    name: React.PropTypes.string,
-    link: React.PropTypes.string,
+  link: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string),
+  github: PropTypes.string,
+  completeness: PropTypes.number,
+  collaborators: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    link: PropTypes.string,
   })),
-  image: React.PropTypes.string,
+  image: PropTypes.string,
 };
 
 Project.defaultProps = {

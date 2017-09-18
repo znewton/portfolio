@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Section extends Component {
   componentDidMount() {
@@ -47,6 +48,6 @@ export default class Section extends Component {
 }
 
 Section.propTypes = {
-  path: React.PropTypes.string.isRequired,
-  active: React.PropTypes.bool
+  path: PropTypes.string.isRequired,
+  active: PropTypes.bool
 }

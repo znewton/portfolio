@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Skill extends Component {
   compare(prop) {
@@ -32,10 +33,10 @@ export default class Skill extends Component {
 }
 
 Skill.propTypes = {
-  title: React.PropTypes.string,
-  skills: React.PropTypes.arrayOf(React.PropTypes.shape({
-    name: React.PropTypes.string,
-    competency: React.PropTypes.number,
+  title: PropTypes.string,
+  skills: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    competency: PropTypes.number,
   })),
 };
 

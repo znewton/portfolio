@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Education extends Component {
   render() {
@@ -22,13 +23,13 @@ export default class Education extends Component {
 }
 
 Education.propTypes = {
-  name: React.PropTypes.string,
-  city: React.PropTypes.string,
-  state: React.PropTypes.string,
-  start_date: React.PropTypes.string,
-  end_date: React.PropTypes.string,
-  earned: React.PropTypes.string,
-  gpa: React.PropTypes.string,
+  name: PropTypes.string,
+  city: PropTypes.string,
+  state: PropTypes.string,
+  start_date: PropTypes.string,
+  end_date: PropTypes.string,
+  earned: PropTypes.string,
+  gpa: PropTypes.string,
 };
 
 Education.defaultProps = {

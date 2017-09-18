@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class HeroImage extends Component {
   render() {
@@ -37,21 +38,21 @@ export default class HeroImage extends Component {
 }
 
 HeroImage.propTypes = {
-  src: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string.isRequired,
-  top: React.PropTypes.string,
-  left: React.PropTypes.string,
-  overlay: React.PropTypes.bool,
-  header: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  top: PropTypes.string,
+  left: PropTypes.string,
+  overlay: PropTypes.bool,
+  header: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ]),
-  subheader: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  subheader: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ]),
-  hleft: React.PropTypes.number,
-  htop: React.PropTypes.number,
-  hright: React.PropTypes.number,
-  hbottom: React.PropTypes.number,
+  hleft: PropTypes.number,
+  htop: PropTypes.number,
+  hright: PropTypes.number,
+  hbottom: PropTypes.number,
 }

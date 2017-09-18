@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Experience extends Component {
   render() {
@@ -23,11 +24,11 @@ export default class Experience extends Component {
 }
 
 Experience.propTypes = {
-  company_name: React.PropTypes.string,
-  position: React.PropTypes.string,
-  start_date: React.PropTypes.string,
-  end_date: React.PropTypes.string,
-  actions: React.PropTypes.arrayOf(React.PropTypes.string),
+  company_name: PropTypes.string,
+  position: PropTypes.string,
+  start_date: PropTypes.string,
+  end_date: PropTypes.string,
+  actions: PropTypes.arrayOf(PropTypes.string),
 };
 
 Experience.defaultProps = {

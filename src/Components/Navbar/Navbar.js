@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 let offset = 0;
 export default class Navbar extends Component {
@@ -60,5 +61,5 @@ export default class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  routes: React.PropTypes.array.isRequired,
+  routes: PropTypes.array.isRequired,
 }

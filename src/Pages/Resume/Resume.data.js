@@ -2,7 +2,7 @@ module.exports = {
   contact_info: {
     name: 'Zachary S. Newton',
     permanent_address: '3734 Edmund Blvd, Minneapolis, MN',
-    current_address: '2922 West St., Unit 4, Ames, IA',
+    current_address: '2922 West St., Unit 9, Ames, IA',
     phone: '(612)275-9524',
     email: 'znewton@iastate.edu',
     github: 'znewton',
@@ -49,7 +49,7 @@ module.exports = {
       { name: 'MySQL',        competency: 3 },
     ],
     software: [
-      { name: 'Ubuntu Linux',       competency: 5 },
+      { name: 'Linux',              competency: 5 },
       { name: 'Illustrator',        competency: 4 },
       { name: 'Photoshop',          competency: 3 },
       { name: 'Blender 3D',         competency: 4 },
@@ -65,9 +65,9 @@ module.exports = {
       end_month: 'August',
       end_year: '2017',
       actions: [
-        'Implemented new client-side features for Workiva\'s product, Wdesk',
+        'Implemented new client-side features for Workiva\'s product, Wdesk, to bring in more customers',
         'Scaled existing product features to allow for 10x-ing',
-        'Contributed creative solutions to UI/UX problems presented by new functionalities',
+        'Contributed creative solutions to UI/UX problems presented by new functionalities to improve the end-user experience',
       ],
     },
     {
@@ -124,7 +124,7 @@ module.exports = {
         },
         {
           description: 'Tried to build a web app to create a 3D printing economy at ISU',
-          date: 'Spring 2016',
+          date: 'Spring 2017',
         },
       ],
     },

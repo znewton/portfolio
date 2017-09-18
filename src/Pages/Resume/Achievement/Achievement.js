@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Achievement extends Component {
   render() {
@@ -15,8 +16,8 @@ export default class Achievement extends Component {
 }
 
 Achievement.propTypes = {
-  name: React.PropTypes.string,
-  dates: React.PropTypes.arrayOf(React.PropTypes.string),
+  name: PropTypes.string,
+  dates: PropTypes.arrayOf(PropTypes.string),
 };
 
 Achievement.defaultProps = {
