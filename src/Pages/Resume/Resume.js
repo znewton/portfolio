@@ -20,12 +20,12 @@ export default class Resume extends Component {
               <div className="permanent">
                 <span className="fa fa-home fa-fw" />
                 {data.contact_info.permanent_address}
-                <span className="type">(Permanent)</span>
+                <span className="type">( Permanent )</span>
               </div>
               <div className="current">
                 <span className="fa fa-building fa-fw" />
                 {data.contact_info.current_address}
-                <span className="type">(Current)</span>
+                <span className="type">( Current )</span>
               </div>
             </div>
           </div>

@@ -9,8 +9,8 @@ export default class Experience extends Component {
           <div className="company">{this.props.company_name}</div>
           <div className="position">{this.props.position}</div>
           <div className="duration">
-            ({this.props.start_date+' - '
-              +(this.props.end_date || 'present')})
+            ({' '+this.props.start_date+' - '
+              +(this.props.end_date.trim() || 'Present')+' '})
           </div>
         </div>
         <ul className="actions">

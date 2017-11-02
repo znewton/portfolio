@@ -12,8 +12,8 @@ export default class Education extends Component {
         <div className="for">
           <div className="received">{this.props.earned}</div>
           <div className="duration">
-            ({this.props.start_date+' - '
-              +(this.props.end_date || 'present')})
+            ({' '+this.props.start_date+' - '
+              +(this.props.end_date.trim() || 'Present')+' '})
           </div>
         </div>
         <div className="gpa">GPA: {this.props.gpa}</div>
