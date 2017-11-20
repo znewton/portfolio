@@ -10,9 +10,9 @@ module.exports = [
   {
     name: 'myx',
     description: 'Personal project to ease the process of combining YouTube playlists.',
-    link: 'https://myxx.znewton.xyz',
+    link: 'https://myx.znewton.xyz',
     tags: ['web', 'app', 'javascript', 'scss', 'html', 'React', 'NodeJS', 'firebase'],
-    github: 'https://github.com/znewton/myxx-client',
+    github: 'https://github.com/znewton/myx-client',
     completeness: 1.0,
     image: myx,
   },
