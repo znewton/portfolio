@@ -92,6 +92,9 @@
     & > * {
       line-height: 1.5em;
     }
+    .fa {
+      margin-right: 0.2em;
+    }
     @include flex(2);
     @include bp-large {
       padding-top: 1em;

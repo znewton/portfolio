@@ -19,7 +19,7 @@ module.exports = {
       end_month: 'December',
       end_year: '2018',
       earned: 'BS in Software Engineering',
-      gpa: '3.55/4.00',
+      gpa: '3.57/4.00',
     },
     { // high school
       name: 'Minnehaha Academy',
@@ -39,12 +39,12 @@ module.exports = {
       { name: 'Dart',           competency: 5 },
       { name: 'Java',           competency: 4 },
       { name: 'SASS',           competency: 5 },
-      { name: 'PHP',            competency: 4 },
+      { name: 'C',              competency: 3 },
     ],
     frameworks: [
       { name: 'React',        competency: 5 },
       { name: 'Angular',      competency: 3 },
-      { name: 'Zend',         competency: 4 },
+      { name: 'Electron',     competency: 3 },
       { name: 'Bootstrap',    competency: 5 },
       { name: 'MySQL',        competency: 3 },
     ],
@@ -112,19 +112,23 @@ module.exports = {
   activities: [
     {
       name: 'HackISU Midwest Hackathon',
-      dates: ['Fall 2015', 'Fall 2016', 'Spring 2017'],
+      dates: ['Fall 2015', 'Fall 2016', 'Spring 2017', 'Fall 2017'],
       actions: [
-        {
-          description: 'Attempted to create a web app for card game Ultimate Werewolf',
-          date: 'Fall 2015',
-        },
+        // {
+        //   description: 'Attempted to create a web app for card game Ultimate Werewolf',
+        //   date: 'Fall 2015',
+        // },
         {
           description: 'Created a web app to check songs for FCC profanity violations',
           date: 'Fall 2016',
         },
+        // {
+        //   description: 'Tried to build a web app to create a 3D printing economy at ISU',
+        //   date: 'Spring 2017',
+        // },
         {
-          description: 'Tried to build a web app to create a 3D printing economy at ISU',
-          date: 'Spring 2017',
+          description: 'Built a web app to live-edit the CSS and JS of any website',
+          date: 'Fall 2017',
         },
       ],
     },

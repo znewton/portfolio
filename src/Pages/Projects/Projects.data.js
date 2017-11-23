@@ -5,6 +5,7 @@ import lyricprof from '../../assets/lyricprof.png';
 import cygames from '../../assets/cygames.png';
 import mnewga from '../../assets/mnewga.png';
 import beer from '../../assets/beer.png';
+import ies from '../../assets/ies.png';
 
 module.exports = [
   {
@@ -17,8 +18,16 @@ module.exports = [
     image: myx,
   },
   {
+    name: 'Internet Enhancement Suite',
+    description: 'HackISU Fall 2017 project to streamline the process of creating custom themes for any website on the internet.',
+    tags: ['web', 'app', 'javascript', 'css', 'html', 'NodeJS'],
+    github: 'https://github.com/znewton/ies',
+    completeness: 0.5,
+    image: ies,
+  },
+  {
     name: 'LyricProf',
-    description: 'HackISU Spring 2016 project to ease the process of checking a song\'s profanity',
+    description: 'HackISU Spring 2016 project to ease the process of checking a song\'s profanity. It is still used today by KURE at Iowa State University.',
     link: 'https://lyricprof.znewton.xyz',
     tags: ['web', 'app', 'javascript', 'css', 'html', 'php'],
     github: 'https://github.com/znewton/lyricprof',

@@ -80,7 +80,10 @@
       line-height: 3em;
       text-align: center;
     }
-    a {
+    a:not([href]) {
+      color: transparent;
+    }
+    a[href] {
       display: block;
       @include box-shadow(0 4px 8px -2px transparent);
       @include transition(background-color 125ms ease, color 125ms ease, box-shadow 125ms ease);

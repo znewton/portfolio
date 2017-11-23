@@ -23,27 +23,44 @@ export default class About extends Component {
             title="Who"
             content={<ul>
               <li>Front-end Developer</li>
-              <li>Gamer</li>
-              <li>Cyclist</li>
+              <li>PC Gamer</li>
+              <li>Avid Cyclist</li>
+              <li>Amateur Chef</li>
               <li>Yerba Mate enthusiast</li>
               <li>Dog lover</li>
             </ul>}
           />
           <Card
             title="What"
-            content={<ul><li>React</li><li>Sass</li><li>caffeine</li></ul>}
+            content={<ul>
+              <li>JavaScript</li>
+              <li>CSS</li>
+              <li>Surface Book</li>
+              <li>caffeine</li>
+            </ul>}
           />
           <Card
             title="Where"
-            content="Iowa State University"
+            content={<ul>
+              <li><strong>From:</strong> Minneapolis, MN</li>
+              <li><strong>At:</strong> Iowa State University</li> 
+              <li><strong>Going:</strong> West</li> 
+            </ul>}
           />
           <Card
             title="Why"
-            content="Make the internet better"
+            content={<ul>
+              <li>Improve the internet</li>
+              <li>Improve the world</li>
+            </ul>}
           />
           <Card
             title="How"
-            content="More caffeine"
+            content={<ul>
+              <li>Caffeine</li>  
+              <li>Late nights</li>  
+              <li>Good friends</li>  
+            </ul>}
           />
         </FlexContainer>
       </article>

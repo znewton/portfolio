@@ -1,2 +1,19 @@
 .About {
+    ul li::before {
+        border-style: solid;
+        border-width: 0.07em 0.07em 0 0;
+        color: lighten($dark_blue, 40%);
+        content: '';
+        display: inline-block;
+        height: 0.45em;
+        width: 0.45em;
+        left: -0.5em;
+        position: relative;
+        top: 0.45em;
+        transform: rotate(45deg);
+        vertical-align: top;
+    }
+    ul li {
+        padding-left: 0.25em;
+    }
 }
