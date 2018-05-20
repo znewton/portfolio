@@ -5,8 +5,11 @@ if [ -z $CNAME ]; then
     echo "Component Name required."
     exit
 fi
-cd ./src
-DIR="."
+
+DIR="./src/$2"
+if [ -z "$2" ]; then
+  DIR="./src/components"
+fi
 COMP_DIR="$DIR/$CNAME"
 if [ -d "$COMP_DIR" ]; then
     echo ""
@@ -52,5 +55,3 @@ echo '''
 '${CNAME}' created successfully. Import it using
 import '${CNAME}' from "'./src/${CNAME}/${CNAME}';
 '''
-
-cd ..
