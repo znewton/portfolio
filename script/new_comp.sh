@@ -51,7 +51,9 @@ cat > "$CSS" << CSS
 }
 CSS
 
+echo "export { default as ${CNAME} } from './${CNAME}/${CNAME}';" >> "$DIR/index.js";
+
 echo '''
 '${CNAME}' created successfully. Import it using
-import '${CNAME}' from "'./src/${CNAME}/${CNAME}';
+import '${CNAME}' from "'${DIR}/${CNAME}/${CNAME}';
 '''
