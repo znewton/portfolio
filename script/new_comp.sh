@@ -6,11 +6,11 @@ if [ -z $CNAME ]; then
     exit
 fi
 
-DIR="./src/$2"
+SUBDIR="$2"
 if [ -z "$2" ]; then
-  DIR="./src/components"
+  SUBDIR="components"
 fi
-COMP_DIR="$DIR/$CNAME"
+COMP_DIR="./src/$SUBDIR/$CNAME"
 if [ -d "$COMP_DIR" ]; then
     echo ""
     printf "Component directory $COMP_DIR exists, replace with new component? (yes/no) "
@@ -51,9 +51,10 @@ cat > "$CSS" << CSS
 }
 CSS
 
-echo "export { default as ${CNAME} } from './${CNAME}/${CNAME}';" >> "$DIR/index.js";
+echo "export { default as ${CNAME} } from './${CNAME}/${CNAME}';" >> "./src/$SUBDIR/index.js";
 
 echo '''
-'${CNAME}' created successfully. Import it using
-import '${CNAME}' from "'${DIR}/${CNAME}/${CNAME}';
+'${CNAME}' created successfully. Import it using:
+
+import '${CNAME}' from "'${SUBDIR}'";
 '''

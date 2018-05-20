@@ -9,7 +9,7 @@
   "plugins": ["prettier"],
   "rules": {
     "semi": 2,
-    "prettier/prettier": "error"
+    "prettier/prettier": "warn"
   },
   "env": {
     "browser": true
