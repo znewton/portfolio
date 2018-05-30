@@ -4,7 +4,8 @@ import './Resume.css';
 class Resume extends Component {
   render() {
     return (
-      <div className="Resume">
+      <div className="Resume view" {...this.props}>
+        Resume
       </div>
     );
   }

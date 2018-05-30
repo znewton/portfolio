@@ -4,7 +4,8 @@ import './Welcome.css';
 class Welcome extends Component {
   render() {
     return (
-      <div className="Welcome">
+      <div className="Welcome view" {...this.props}>
+        Welcome
       </div>
     );
   }

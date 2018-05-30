@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 import { Nav, Main, Footer } from 'components';
-import views from 'views';
 
 class App extends Component {
   constructor() {
@@ -11,6 +10,16 @@ class App extends Component {
       activeView: null
     };
     this.setAppState = this.setAppState.bind(this);
+  }
+
+  componentDidMount() {
+    const hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    this.setState({ activeView: hash });
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
   }
 
   render() {

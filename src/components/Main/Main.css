@@ -1,2 +1,6 @@
 .Main {
 }
+
+.Main .view:first-of-type {
+  padding-top: 4rem;
+}

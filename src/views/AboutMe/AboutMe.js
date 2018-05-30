@@ -4,7 +4,8 @@ import './AboutMe.css';
 class AboutMe extends Component {
   render() {
     return (
-      <div className="AboutMe">
+      <div className="AboutMe view" {...this.props}>
+        About
       </div>
     );
   }

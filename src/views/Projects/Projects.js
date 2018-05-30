@@ -4,7 +4,8 @@ import './Projects.css';
 class Projects extends Component {
   render() {
     return (
-      <div className="Projects">
+      <div className="Projects view" {...this.props}>
+        Projects
       </div>
     );
   }
