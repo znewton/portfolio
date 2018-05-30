@@ -5,8 +5,10 @@ import ViewList from 'views/viewList';
 import SmoothScroll from 'lib/SmoothScroll';
 
 class Main extends Component {
-  componentDidUpdate() {
-    SmoothScroll(document.getElementById(this.props.activeView));
+  componentDidMount() {
+    document.addEventListener('viewlinked', e => {
+      SmoothScroll(document.getElementById(e.detail.view));
+    });
   }
 
   render() {
