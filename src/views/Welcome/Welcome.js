@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Welcome.css';
 
-class Welcome extends Component {
+class Welcome extends View {
   render() {
     return (
       <div className="Welcome view" {...this.props}>

@@ -16,10 +16,20 @@ class Main extends Component {
       <div className="Main">
         {Object.keys(ViewList).map(key => {
           const view = ViewList[key];
-          return <view.component key={view.id} id={view.id} />;
+          return (
+            <view.component
+              key={view.id}
+              id={view.id}
+              setActiveView={() => this.setActiveView(view.id)}
+            />
+          );
         })}
       </div>
     );
+  }
+
+  setActiveView(id) {
+    this.props.setAppState('activeView', id);
   }
 }
 
