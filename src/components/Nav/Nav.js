@@ -61,7 +61,14 @@ class Nav extends Component {
   }
 
   linkTo(href) {
-    return () => this.props.setAppState('activeView', href);
+    return e => {
+      document.dispatchEvent(
+        new CustomEvent('viewlinked', {
+          detail: { view: href }
+        })
+      );
+      this.props.setAppState('activeView', href);
+    };
   }
 
   getLinkClassName(id) {

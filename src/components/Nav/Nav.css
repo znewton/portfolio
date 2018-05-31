@@ -42,7 +42,7 @@
 }
 
 .scrolled .Nav {
-  background-color: rgba(255, 255, 255, 0.975);
+  background-color: #fffffd;
   box-shadow: 0 15px 35px rgba(55, 55, 95, 0.03), 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
