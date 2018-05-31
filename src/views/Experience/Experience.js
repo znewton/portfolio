@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Experience.css';
+import View from '../View';
 
-class Experience extends Component {
+class Experience extends View {
   render() {
     return (
-      <div className="Experience view" {...this.props}>
+      <div className={this.cnb.className} id={this.props.id}>
         Experience
       </div>
     );

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Welcome.css';
+import View from '../View';
 
 class Welcome extends View {
   render() {
     return (
-      <div className="Welcome view" {...this.props}>
+      <div className={this.cnb.className} id={this.props.id}>
         Welcome
       </div>
     );

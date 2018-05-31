@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Resume.css';
+import View from '../View';
 
-class Resume extends Component {
+class Resume extends View {
   render() {
     return (
-      <div className="Resume view" {...this.props}>
+      <div className={this.cnb.className} id={this.props.id}>
         Resume
       </div>
     );
