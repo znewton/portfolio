@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './Main.css';
 
 import ViewList from 'views/viewList';
-import SmoothScroll from 'lib/SmoothScroll';
+// import SmoothScroll from 'lib/SmoothScroll';
 
 class Main extends Component {
   componentDidMount() {
     document.addEventListener('viewlinked', e => {
-      SmoothScroll(document.getElementById(e.detail.view));
+      // SmoothScroll(document.getElementById(e.detail.view));
     });
   }
 
@@ -21,6 +21,7 @@ class Main extends Component {
               key={view.id}
               id={view.id}
               setActiveView={() => this.setActiveView(view.id)}
+              isActive={this.props.activeView === view.id}
             />
           );
         })}

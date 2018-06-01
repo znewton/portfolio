@@ -1,4 +1,4 @@
-import { Welcome, Resume, Projects, AboutMe, Experience } from 'views';
+import { Welcome, Projects, AboutMe, Experience } from 'views';
 
 export default {
   welcome: {
@@ -15,11 +15,6 @@ export default {
     id: 'projects',
     label: 'Projects',
     component: Projects
-  },
-  resume: {
-    id: 'resume',
-    label: 'Resumé',
-    component: Resume
   },
   about: {
     id: 'about-me',

@@ -1,2 +1,5 @@
 .Footer {
+  min-height: 10rem;
+  background-color: #efefeb;
+  width: 100%;
 }

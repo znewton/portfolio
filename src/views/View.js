@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ClassNameBuilder from 'lib/ClassNameBuilder';
 
 class View extends Component {
   constructor() {
     super();
     this.cnb = new ClassNameBuilder('view');
-    this.cnb.add(this.displayName);
   }
   componentDidMount() {
     const element = document.getElementById(this.props.id);
     this.scrollHandler = () => {
-      const elmtBox = element.getBoundingClientRect();
+      if (this.props.isActive) return;
+      const elBox = element.getBoundingClientRect();
+      if (elBox.top < 50 && elBox.bottom < window.innerHeight + 50) {
+        this.props.setActiveView();
+      }
     };
     window.addEventListener('scroll', this.scrollHandler);
   }

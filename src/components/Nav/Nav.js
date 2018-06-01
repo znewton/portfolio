@@ -11,7 +11,7 @@ class Nav extends Component {
     this.linkTo = this.linkTo.bind(this);
   }
   render() {
-    const { welcome, experience, projects, about, resume } = ViewList;
+    const { welcome, experience, projects, about } = ViewList;
     return (
       <div className="Nav">
         <div className="nav-left">
@@ -48,12 +48,12 @@ class Nav extends Component {
             {about.label}
           </a>
           <a
-            className={this.getLinkClassName(resume.id)}
+            className={this.getLinkClassName('resume')}
             href={'/resume.doc'}
             target="_blank"
             disabled="true"
           >
-            {resume.label}
+            Resumé
           </a>
         </div>
       </div>
@@ -67,7 +67,7 @@ class Nav extends Component {
           detail: { view: href }
         })
       );
-      this.props.setAppState('activeView', href);
+      // this.props.setAppState('activeView', href);
     };
   }
 
