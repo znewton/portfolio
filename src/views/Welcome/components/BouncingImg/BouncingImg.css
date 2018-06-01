@@ -1,0 +1,42 @@
+.BouncingImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 5rem;
+  font-size: 1rem;
+  will-change: transform;
+}
+
+.BouncingImg .detail {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  top: 0;
+  width: 0;
+  background-color: #fffffe;
+  transition: width 150ms ease;
+}
+
+.BouncingImg .backdrop {
+  position: absolute;
+  top: 0;
+  background-color: #fffffe;
+  box-shadow: 0 1rem 3rem rgba(55, 55, 95, 0.03),
+    0 0.3rem 0.9rem rgba(0, 0, 0, 0.07);
+  transition: all 150ms ease;
+}
+.BouncingImg:hover .backdrop {
+  box-shadow: 0 1.5rem 4.5rem rgba(55, 55, 95, 0.03),
+    0 0.45rem 1.35rem rgba(0, 0, 0, 0.07);
+}
+
+.BouncingImg .img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

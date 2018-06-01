@@ -1,6 +1,7 @@
 import React from 'react';
 import './Welcome.css';
 import View from '../View';
+import { BouncingImg } from './components';
 
 class Welcome extends View {
   constructor() {
@@ -11,7 +12,9 @@ class Welcome extends View {
   render() {
     return (
       <div className={this.cnb.className} id={this.props.id}>
-        Welcome
+        <BouncingImg detail="Hi, I'm a test!">Test1</BouncingImg>
+        <BouncingImg detail="Hi, I'm also test!">Test2</BouncingImg>
+        <BouncingImg detail="Moar test">Test3</BouncingImg>
       </div>
     );
   }
