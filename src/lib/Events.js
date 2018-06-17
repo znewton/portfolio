@@ -33,7 +33,7 @@ function addEndEventListener(element, event, _callback, timeout, name) {
   let handler = evt => {
     clearTimeout(endTimer);
     endTimer = setTimeout(function() {
-      handler(evt);
+      _callback(evt);
     }, timeout);
   };
   element.addEventListener(event, handler);
@@ -47,9 +47,7 @@ function addEndEventListener(element, event, _callback, timeout, name) {
  */
 function removeEndEventListener(name) {
   if (!endEvents[name]) return;
-  let element = endEvents[name].element;
-  let event = endEvents[name].event;
-  let handler = endEvents[name].handler;
+  const { element, event, handler } = endEvents[name];
   element.removeEventListener(event, handler);
   delete endEvents[name];
 }
@@ -78,9 +76,7 @@ function addOneTimeEvent(element, event, _callback, name) {
  */
 function removeOneTimeEvent(name) {
   if (!oneTimeEvents[name]) return;
-  let element = oneTimeEvents[name].element;
-  let event = oneTimeEvents[name].event;
-  let handler = oneTimeEvents[name].handler;
+  const { element, event, handler } = oneTimeEvents[name];
   element.removeEventListener(event, handler);
   delete oneTimeEvents[name];
 }

@@ -19,10 +19,11 @@ class BouncingImg extends Component {
       lastTick: new Date()
     };
     this.frame = { height: 1000, width: 1000 };
+    this.updateParentSize = this.updateParentSize.bind(this);
   }
   componentDidMount() {
     this.updateParentSize();
-    addEndEventListener(window, 'resize', this.updateParentSize, 100, this.id);
+    addEndEventListener(window, 'resize', this.updateParentSize, 500, this.id);
     const randStartX = Math.floor(
       Math.random() * (this.frame.width - this.props.diameter)
     );
@@ -89,6 +90,24 @@ class BouncingImg extends Component {
       height: parentBox.height,
       width: parentBox.width
     };
+    const { width, height } = this.frame;
+    const { diameter } = this.props;
+    let { x, y, xVel, yVel } = this.state;
+    if (x > width) {
+      x = width - diameter;
+      xVel = -1;
+    } else if (x < 0) {
+      x = diameter;
+      xVel = 1;
+    }
+    if (y > height) {
+      y = height - diameter;
+      yVel = -1;
+    } else if (y < 0) {
+      y = diameter;
+      yVel = 1;
+    }
+    this.setState({ x, y, xVel, yVel });
   }
   animate() {
     const now = new Date();
@@ -110,7 +129,7 @@ class BouncingImg extends Component {
     });
   }
   x(now, { x, xVel, lastTick }) {
-    return x + (now - lastTick) / 1000 / 1 * xVel * this.props.speed;
+    return x + ((now - lastTick) / 1000 / 1) * xVel * this.props.speed;
   }
   xVel({ x, xVel }) {
     if (x + this.props.diameter >= this.frame.width - FRAME_PADDING) {
@@ -121,7 +140,7 @@ class BouncingImg extends Component {
     return xVel;
   }
   y(now, { y, yVel, lastTick }) {
-    return y + (now - lastTick) / 1000 / 1 * yVel * this.props.speed;
+    return y + ((now - lastTick) / 1000 / 1) * yVel * this.props.speed;
   }
   yVel({ y, yVel }) {
     if (y + this.props.diameter >= this.frame.height - FRAME_PADDING) {
