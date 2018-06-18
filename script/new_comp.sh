@@ -1,5 +1,24 @@
 #!/bin/bash
 
+if [ "$1" == "-h" ]; then
+  echo """
+Create a new component
+
+Usage: ./script/new_comp.sh <ComponentName> <subdirectory>
+
+Options:
+  -h: Display this dialogue
+
+Params:
+  <ComponentName>: The name of the component. REQUIRED
+
+  <subdirectory>: The directory within 'src' that the
+                    component will be placed in. OPTIONAL
+                   - Defaults to 'components'.
+"""
+  exit
+fi
+
 CNAME="$1"
 if [ -z $CNAME ]; then
     echo "Component Name required."

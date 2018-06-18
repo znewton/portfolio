@@ -19,12 +19,13 @@ body {
 a {
   font-family: inherit;
   font-size: inherit;
-  color: inherit;
+  color: #0a78bd;
   text-decoration: none;
 }
 a:hover {
-  color: #111;
+  color: #064a74;
   cursor: pointer;
+  text-decoration: underline;
 }
 a[disabled] {
   pointer-events: none;
@@ -62,4 +63,11 @@ blockquote footer {
 
 p {
   margin: 0.5rem 0;
+}
+
+.light {
+  color: #555;
+}
+.italics {
+  font-style: italic;
 }
