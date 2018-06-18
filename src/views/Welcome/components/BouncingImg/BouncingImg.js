@@ -21,9 +21,11 @@ class BouncingImg extends Component {
     };
     this.frame = { height: 1000, width: 1000 };
     this.updateParentSize = this.updateParentSize.bind(this);
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
   }
   componentDidMount() {
     this.updateParentSize();
+    document.addEventListener('visibilitychange', this.handleVisibilityChange);
     addEndEventListener(window, 'resize', this.updateParentSize, 500, this.id);
     const randStartX = Math.floor(
       Math.random() *
@@ -49,6 +51,10 @@ class BouncingImg extends Component {
   }
   componentWillUnmount() {
     removeEndEventListener(this.id);
+    document.removeEventListener(
+      'visibilitychange',
+      this.handleVisibilityChange
+    );
     cancelAnimationFrame(this.raf);
   }
   render() {
@@ -116,6 +122,14 @@ class BouncingImg extends Component {
         )}
       </div>
     );
+  }
+  handleVisibilityChange() {
+    if (document.visibilityState === 'hidden') {
+      cancelAnimationFrame(this.raf);
+    } else {
+      this.setState({ lastTick: new Date() });
+      this.animate();
+    }
   }
   handleMouseLeave() {
     const now = new Date();
