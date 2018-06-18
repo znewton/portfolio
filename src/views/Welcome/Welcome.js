@@ -2,6 +2,11 @@ import React from 'react';
 import './Welcome.css';
 import View from '../View';
 import { BouncingImg } from './components';
+import WelcomeData from './welcome.data';
+
+const commonChildProps = {
+  frameYReduction: 50
+};
 
 class Welcome extends View {
   constructor() {
@@ -12,9 +17,25 @@ class Welcome extends View {
   render() {
     return (
       <div className={this.cnb.className} id={this.props.id}>
-        <BouncingImg detail="Hi, I'm a test!">Test1</BouncingImg>
-        <BouncingImg detail="Hi, I'm also test!">Test2</BouncingImg>
-        <BouncingImg detail="Moar test">Test3</BouncingImg>
+        {WelcomeData.map(
+          ({
+            id,
+            img,
+            title,
+            description,
+            wrapperProps = {},
+            imgProps = {}
+          }) => (
+            <BouncingImg
+              key={id}
+              detail={description}
+              {...wrapperProps}
+              {...commonChildProps}
+            >
+              <img src={img} alt={title} title={title} {...imgProps} />
+            </BouncingImg>
+          )
+        )}
       </div>
     );
   }

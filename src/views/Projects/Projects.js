@@ -7,6 +7,7 @@ class Projects extends View {
     super();
     this.displayName = 'Projects';
     this.cnb.add(this.displayName);
+    this.cnb.add('view-sample');
   }
   render() {
     return (

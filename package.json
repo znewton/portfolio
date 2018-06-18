@@ -5,6 +5,7 @@
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-pro-light": "^5.0.13",
+    "moment": "^2.22.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4"
@@ -16,6 +17,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "eslint-plugin-prettier": "^2.6.0",
     "prettier": "^1.12.1"
   }

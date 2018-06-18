@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './BouncingImg.css';
 
 import { addEndEventListener, removeEndEventListener } from 'lib/Events';
@@ -13,8 +14,8 @@ class BouncingImg extends Component {
     this.state = {
       y: 0,
       x: 0,
-      xVel: Math.random() < 0.5 ? 1 : -1,
-      yVel: Math.random() < 0.5 ? 1 : -1,
+      xVel: 0,
+      yVel: 0,
       hovered: false,
       lastTick: new Date()
     };
@@ -25,13 +26,25 @@ class BouncingImg extends Component {
     this.updateParentSize();
     addEndEventListener(window, 'resize', this.updateParentSize, 500, this.id);
     const randStartX = Math.floor(
-      Math.random() * (this.frame.width - this.props.diameter)
+      Math.random() *
+        (this.frame.width - (this.props.diameter + this.props.frameXReduction))
     );
     const randStartY = Math.floor(
-      Math.random() * (this.frame.height - this.props.diameter)
+      Math.random() *
+        (this.frame.height - (this.props.diameter + this.props.frameYReduction))
     );
-    this.setState({ x: randStartX, y: randStartY, lastTick: new Date() }, () =>
-      this.animate()
+    const rand = () => (Math.random() + 1) * (Math.random() < 0.5 ? 1 : -1);
+    this.setState(
+      {
+        x: randStartX,
+        y: randStartY,
+        xVel: rand(),
+        yVel: rand(),
+        lastTick: new Date()
+      },
+      () => {
+        this.animate();
+      }
     );
   }
   componentWillUnmount() {
@@ -39,28 +52,45 @@ class BouncingImg extends Component {
     cancelAnimationFrame(this.raf);
   }
   render() {
+    const hoverDiameter = this.props.hoverDiameter || HOVER_DIAMETER;
     const { x, y, hovered } = this.state;
-    const diameter = !hovered ? this.props.diameter : HOVER_DIAMETER;
+    const diameter = !hovered ? this.props.diameter : hoverDiameter;
     const mainStyles = {
       height: diameter,
       width: diameter,
-      transform: `translate(${x}px, ${y}px)`
+      transform: `translate(${hovered ? Math.floor(x) : x}px, ${
+        hovered ? Math.floor(y) : y
+      }px)`,
+      zIndex: hovered ? 100 : null
     };
     const switchOpenDir =
-      x + HOVER_DIAMETER * 3 >= this.frame.width - FRAME_PADDING;
+      x + hoverDiameter * 3 >= this.frame.width - FRAME_PADDING;
+    const borderRadiusStyles = {
+      borderTopLeftRadius: switchOpenDir && hovered ? null : diameter,
+      borderBottomLeftRadius: switchOpenDir && hovered ? null : diameter,
+      borderTopRightRadius: !switchOpenDir && hovered ? null : diameter,
+      borderBottomRightRadius: !switchOpenDir && hovered ? null : diameter
+    };
     const backdropStyles = {
-      borderTopLeftRadius: switchOpenDir && hovered ? 0 : diameter,
-      borderBottomLeftRadius: switchOpenDir && hovered ? 0 : diameter,
-      borderTopRightRadius: !switchOpenDir && hovered ? 0 : diameter,
-      borderBottomRightRadius: !switchOpenDir && hovered ? 0 : diameter,
+      ...borderRadiusStyles,
       width: hovered ? 3 * diameter : diameter,
       height: diameter,
       left: !switchOpenDir ? 0 : null,
       right: switchOpenDir ? 0 : null
     };
     const imgStyles = {
+      ...borderRadiusStyles,
       height: diameter,
       width: diameter
+    };
+    const detailWrapperStyles = {
+      width: hovered ? 2 * hoverDiameter : 0,
+      height: hoverDiameter,
+      left: !switchOpenDir ? hoverDiameter : null,
+      right: switchOpenDir ? hoverDiameter : null
+    };
+    const detailStyles = {
+      transformOrigin: switchOpenDir ? 'right' : 'left'
     };
     return (
       <div
@@ -70,11 +100,20 @@ class BouncingImg extends Component {
         onMouseLeave={() => this.handleMouseLeave()}
         style={mainStyles}
       >
-        <div className="backdrop" style={backdropStyles} />
-        <div className="img" style={imgStyles}>
+        <div className="BouncingImg__backdrop" style={backdropStyles} />
+        <div className="BouncingImg__img" style={imgStyles}>
           {this.props.children}
         </div>
-        {this.props.detail && <div className="detail">{this.props.detail}</div>}
+        {this.props.detail && (
+          <div
+            className="BouncingImg__detail-wrapper"
+            style={detailWrapperStyles}
+          >
+            <div className="BouncingImg__detail" style={detailStyles}>
+              {this.props.detail}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -92,22 +131,18 @@ class BouncingImg extends Component {
     };
     const { width, height } = this.frame;
     const { diameter } = this.props;
-    let { x, y, xVel, yVel } = this.state;
+    let { x, y } = this.state;
     if (x > width) {
       x = width - diameter;
-      xVel = -1;
     } else if (x < 0) {
       x = diameter;
-      xVel = 1;
     }
     if (y > height) {
       y = height - diameter;
-      yVel = -1;
     } else if (y < 0) {
       y = diameter;
-      yVel = 1;
     }
-    this.setState({ x, y, xVel, yVel });
+    this.setState({ x, y });
   }
   animate() {
     const now = new Date();
@@ -129,32 +164,45 @@ class BouncingImg extends Component {
     });
   }
   x(now, { x, xVel, lastTick }) {
-    return x + ((now - lastTick) / 1000 / 1) * xVel * this.props.speed;
+    return x + ((now - lastTick) / 1000 / 2) * xVel * this.props.speed;
   }
   xVel({ x, xVel }) {
-    if (x + this.props.diameter >= this.frame.width - FRAME_PADDING) {
-      return -1;
-    } else if (x <= FRAME_PADDING) {
-      return 1;
+    const frameOffset = FRAME_PADDING + this.props.frameXReduction;
+    const outLeft = x + this.props.diameter >= this.frame.width - frameOffset;
+    const outRight = x <= frameOffset;
+    if ((outLeft && xVel > 0) || (outRight && xVel < 0)) {
+      return -1 * xVel;
     }
     return xVel;
   }
   y(now, { y, yVel, lastTick }) {
-    return y + ((now - lastTick) / 1000 / 1) * yVel * this.props.speed;
+    return y + ((now - lastTick) / 1000 / 2) * yVel * this.props.speed;
   }
   yVel({ y, yVel }) {
-    if (y + this.props.diameter >= this.frame.height - FRAME_PADDING) {
-      return -1;
-    } else if (y <= FRAME_PADDING) {
-      return 1;
+    const frameOffset = FRAME_PADDING + this.props.frameYReduction;
+    const outBottom =
+      y + this.props.diameter >= this.frame.height - frameOffset;
+    const outTop = y <= frameOffset;
+    if ((outBottom && yVel > 0) || (outTop && yVel < 0)) {
+      return -1 * yVel;
     }
     return yVel;
   }
 }
 
+BouncingImg.propTypes = {
+  diameter: PropTypes.number,
+  speed: PropTypes.number,
+  detail: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  frameYReduction: PropTypes.number,
+  frameXReduction: PropTypes.number
+};
+
 BouncingImg.defaultProps = {
   diameter: 100,
-  speed: 50
+  speed: 50,
+  frameYReduction: 0,
+  frameXReduction: 0
 };
 
 export default BouncingImg;

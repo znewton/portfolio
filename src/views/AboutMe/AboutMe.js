@@ -7,6 +7,7 @@ class AboutMe extends View {
     super();
     this.displayName = 'AboutMe';
     this.cnb.add(this.displayName);
+    this.cnb.add('view-sample');
   }
   render() {
     return (

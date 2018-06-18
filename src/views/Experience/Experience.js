@@ -7,6 +7,7 @@ class Experience extends View {
     super();
     this.displayName = 'Experience';
     this.cnb.add(this.displayName);
+    this.cnb.add('view-sample');
   }
   render() {
     return (
