@@ -6,11 +6,12 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-pro-solid": "^5.0.13",
-    "@fortawesome/react-fontawesome": "^0.0.20",
+    "@fortawesome/fontawesome-svg-core": "^1.2.3",
+    "@fortawesome/react-fontawesome": "^0.1.2",
     "moment": "^2.22.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,7 +20,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^9.0.0",
     "eslint-plugin-prettier": "^2.6.0",
     "prettier": "^1.12.1"
   }

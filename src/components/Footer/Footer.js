@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt } from '@fortawesome/fontawesome-pro-solid';
 import {
   faFacebook,
