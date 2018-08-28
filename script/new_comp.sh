@@ -75,5 +75,5 @@ echo "export { default as ${CNAME} } from './${CNAME}/${CNAME}';" >> "./src/$SUB
 echo '''
 '${CNAME}' created successfully. Import it using:
 
-import '${CNAME}' from "'${SUBDIR}'";
+import { '${CNAME}' } from "'${SUBDIR}'";
 '''
