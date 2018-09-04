@@ -1,6 +1,13 @@
 .view {
   min-height: 80vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.view h1 {
+  font-size: 3rem;
 }
 
 .view-sample {
