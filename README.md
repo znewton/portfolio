@@ -1,22 +1,28 @@
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+Below you will find some information on how to perform common tasks.<br>
+You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
 # Portfolio
-This is a portfolio site repository. The original was made in a couple of hours
-at HackISU Fall 2016, so I decided to use ReactJS to create a better, revamped
-version.
 
-## Goals
-My Goal with this project was to have fun using potentially very out there
-design and animation with inspiration from [Dribbble](https://dribbble.com).
-Also, I wanted more practice using ReactJS and Sass for a static site instead
-of a complex web app.
+## Deploying
 
-## Technologies/Libraries
-- ReactJS
- - React
- - React Router
-- Sass
-- NodeJS
- - npm
- - express
-- Webpack
- - ExtractTextPlugin
- - HtmlWebpackPlugin
+If need-be, alter `script/deploy.sh` to reflect your correct username, server, and domain.
+
+If you don't have an ssh key already generated, run
+
+```
+ssh-keygen -t rsa -b 2048
+```
+
+Then,
+
+```
+ssh-copy-id username@server
+```
+
+Finally,
+
+```
+./script/deploy.sh
+```

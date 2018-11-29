@@ -1,0 +1,15 @@
+.Welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-sm {
+  max-width: 60%;
+  max-height: 60%;
+}
+.logo-md {
+  max-width: 75%;
+  max-height: 75%;
+}

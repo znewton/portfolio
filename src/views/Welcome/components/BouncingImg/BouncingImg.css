@@ -1,0 +1,60 @@
+.BouncingImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 5rem;
+  font-size: 1rem;
+  will-change: transform;
+}
+
+.BouncingImg__detail-wrapper {
+  overflow: hidden;
+  position: absolute;
+  transition: all 150ms ease, width 50ms ease;
+  display: flex;
+  align-items: center;
+}
+
+.BouncingImg__detail {
+  left: 0;
+  padding: 1rem;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 150ms ease 50ms, opacity 150ms ease 50ms;
+}
+.BouncingImg:hover .BouncingImg__detail {
+  transform: scale(1);
+  opacity: 1;
+}
+.BouncingImg__detail a {
+  color: #0a78bd;
+}
+.BouncingImg__detail a:hover {
+  color: #064a74;
+}
+
+.BouncingImg__backdrop {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  background-color: #fffffe;
+  box-shadow: 0 1rem 3rem rgba(55, 55, 95, 0.03),
+    0 0.3rem 0.9rem rgba(0, 0, 0, 0.07);
+  transition: all 150ms ease;
+}
+.BouncingImg:hover .BouncingImg__backdrop {
+  box-shadow: 0 1.5rem 4.5rem rgba(55, 55, 95, 0.03),
+    0 0.45rem 1.35rem rgba(0, 0, 0, 0.07);
+}
+
+.BouncingImg__img {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 150ms ease;
+}

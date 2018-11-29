@@ -1,0 +1,23 @@
+.Experience {
+}
+
+.Experience__experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Experience__experience-title {
+  width: 80%;
+  font-size: 2rem;
+  position: relative;
+}
+.Experience__experience-title::after {
+  content: '';
+  height: 1px;
+  width: 80%;
+  /* background-color: #ddddda; */
+  background: linear-gradient(45deg, #eeeeea, transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
