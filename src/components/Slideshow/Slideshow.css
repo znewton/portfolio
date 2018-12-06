@@ -2,46 +2,76 @@
   height: 20rem;
   width: 100%;
   display: flex;
-  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* overflow: hidden; */
+  /* border: 2px dashed #000; */
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
 }
 
 .Slideshow__slide {
-  flex-grow: 0;
-  flex-basis: 3rem;
-  width: 3rem;
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  display: block;
+  /* border: 2px dashed #aaa; */
+  height: 100%;
+  transition: width ease 125ms;
+}
+.Slideshow__slide:not(.active) {
+  min-width: 4rem;
 }
 .Slideshow__slide.active {
   flex-grow: 1;
-  width: unset;
-}
-.Slideshow__slide.active .Slideshow__slide-image {
-  width: unset;
-}
-.Slideshow__slide.active .Slideshow__slide-body {
   display: flex;
-  animation: fade-in 250ms;
+  flex-direction: row;
+  z-index: 100;
+  box-shadow: 10px 0 16px -8px rgba(0,0,0,0.1), -10px 0 16px -5px rgba(0,0,0,0.1);
+}
+.Slideshow__slide:first-of-type.active {
+  box-shadow: 10px 0 16px -5px rgba(0,0,0,0.1);
+}
+.Slideshow__slide:last-of-type.active {
+  box-shadow: -10px 0 16px -5px rgba(0,0,0,0.1);
 }
 
 .Slideshow__slide-image {
-  flex-basis: 50%;
-  flex-grow: 1;
+  position:relative;
+  width: 50%;
+  height: 100%;
   overflow: hidden;
 }
 .Slideshow__slide-image img {
+  width: unset;
+  position: absolute;
+  right: 0;
   max-width: unset;
   height: 100%;
 }
 .Slideshow__slide-body {
-  flex-grow: 1;
-  flex-basis: 50%;
-  display: none;
+  width: 50%;
+  display: flex;
   padding: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 1;
   transition: opacity 250ms ease;
+}
+.Slideshow__slide:not(.active) .Slideshow__slide-image {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.Slideshow__slide:not(.active) .Slideshow__slide-image img {
+  height: 100%;
+  position: relative;
+}
+.Slideshow__slide:not(.active) .Slideshow__slide-body {
+  display: none;
+  opacity: 0;
+}
+
+.Slideshow__slide.active .Slideshow__slide-body {
+  animation: fade-in 250ms;
 }
 
 @keyframes fade-in {
