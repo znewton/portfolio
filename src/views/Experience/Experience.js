@@ -6,6 +6,26 @@ import { Slideshow } from 'components';
 
 const experiences = [
   {
+    title: 'Zendesk',
+    slides: [
+      {
+        body: (
+          <div>
+            <p>
+              I spent the summer of 2018 interning at Zendesk in San Francisco
+              as a Front-end software engineer
+            </p>
+          </div>
+        ),
+        image: {
+          src:
+            'https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          alt: 'The golden gate bridge shrouded by fog'
+        }
+      }
+    ]
+  },
+  {
     title: 'Workiva',
     slides: [
       {
