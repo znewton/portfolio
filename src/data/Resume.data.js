@@ -10,7 +10,8 @@ module.exports = {
   },
   objective: 'Looking for a software engineering internship for Summer 2018',
   educations: [
-    { // university
+    {
+      // university
       name: 'Iowa State University',
       city: 'Ames',
       state: 'IA',
@@ -21,7 +22,8 @@ module.exports = {
       earned: 'BS in Software Engineering',
       gpa: '3.57/4.00',
     },
-    { // high school
+    {
+      // high school
       name: 'Minnehaha Academy',
       city: 'Minneapolis',
       state: 'MN',
@@ -35,25 +37,25 @@ module.exports = {
   ],
   skills: {
     languages: [
-      { name: 'JavaScript',     competency: 5 },
-      { name: 'Dart',           competency: 5 },
-      { name: 'Java',           competency: 4 },
-      { name: 'SASS',           competency: 5 },
-      { name: 'C',              competency: 3 },
+      { name: 'JavaScript', competency: 5 },
+      { name: 'Dart', competency: 5 },
+      { name: 'Java', competency: 4 },
+      { name: 'SASS', competency: 5 },
+      { name: 'C', competency: 3 },
     ],
     frameworks: [
-      { name: 'React',        competency: 5 },
-      { name: 'Angular',      competency: 3 },
-      { name: 'Electron',     competency: 3 },
-      { name: 'Bootstrap',    competency: 5 },
-      { name: 'MySQL',        competency: 3 },
+      { name: 'React', competency: 5 },
+      { name: 'Angular', competency: 3 },
+      { name: 'Electron', competency: 3 },
+      { name: 'Bootstrap', competency: 5 },
+      { name: 'MySQL', competency: 3 },
     ],
     software: [
-      { name: 'Linux',              competency: 5 },
-      { name: 'Illustrator',        competency: 4 },
-      { name: 'Photoshop',          competency: 3 },
-      { name: 'Blender 3D',         competency: 4 },
-      { name: 'MS Office',          competency: 4 },
+      { name: 'Linux', competency: 5 },
+      { name: 'Illustrator', competency: 4 },
+      { name: 'Photoshop', competency: 3 },
+      { name: 'Blender 3D', competency: 4 },
+      { name: 'MS Office', competency: 4 },
     ],
   },
   experiences: [
@@ -65,7 +67,7 @@ module.exports = {
       end_month: '',
       end_year: '',
       actions: [
-        'Implemented new client-side features for Workiva\'s product, Wdesk, to bring in more customers',
+        "Implemented new client-side features for Workiva's product, Wdesk, to bring in more customers",
         'Scaled existing product features to allow for 10x-ing',
         'Contributed creative solutions to UI/UX problems presented by new functionalities to improve the end-user experience',
       ],
@@ -119,7 +121,8 @@ module.exports = {
         //   date: 'Fall 2015',
         // },
         {
-          description: 'Created a web app to check songs for FCC profanity violations',
+          description:
+            'Created a web app to check songs for FCC profanity violations',
           date: 'Fall 2016',
         },
         // {
@@ -127,7 +130,8 @@ module.exports = {
         //   date: 'Spring 2017',
         // },
         {
-          description: 'Built a web app to live-edit the CSS and JS of any website',
+          description:
+            'Built a web app to live-edit the CSS and JS of any website',
           date: 'Fall 2017',
         },
       ],
@@ -145,13 +149,14 @@ module.exports = {
         //   date: 'November 2016',
         // },
         {
-          description: 'Redesigned a website for my aunt\'s golf club (MNEWGA)',
+          description: "Redesigned a website for my aunt's golf club (MNEWGA)",
           date: 'December 2016',
         },
         {
-          description: 'Built a web app to combine YouTube playlists from multiple channels',
-          date: 'July 2017'
-        }
+          description:
+            'Built a web app to combine YouTube playlists from multiple channels',
+          date: 'July 2017',
+        },
       ],
     },
   ],
@@ -173,4 +178,4 @@ module.exports = {
       dates: ['2015'],
     },
   ],
-}
+};

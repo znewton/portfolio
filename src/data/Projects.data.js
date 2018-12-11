@@ -10,16 +10,27 @@ import ies from '../../assets/ies.png';
 module.exports = [
   {
     name: 'myx',
-    description: 'Personal project to ease the process of combining YouTube playlists.',
+    description:
+      'Personal project to ease the process of combining YouTube playlists.',
     link: 'https://myx.znewton.xyz',
-    tags: ['web', 'app', 'javascript', 'scss', 'html', 'React', 'NodeJS', 'firebase'],
+    tags: [
+      'web',
+      'app',
+      'javascript',
+      'scss',
+      'html',
+      'React',
+      'NodeJS',
+      'firebase',
+    ],
     github: 'https://github.com/znewton/myx-client',
     completeness: 1.0,
     image: myx,
   },
   {
     name: 'Internet Enhancement Suite',
-    description: 'HackISU Fall 2017 project to streamline the process of creating custom themes for any website on the internet.',
+    description:
+      'HackISU Fall 2017 project to streamline the process of creating custom themes for any website on the internet.',
     tags: ['web', 'app', 'javascript', 'css', 'html', 'NodeJS'],
     github: 'https://github.com/znewton/ies',
     completeness: 0.5,
@@ -27,7 +38,8 @@ module.exports = [
   },
   {
     name: 'LyricProf',
-    description: 'HackISU Spring 2016 project to ease the process of checking a song\'s profanity. It is still used today by KURE at Iowa State University.',
+    description:
+      "HackISU Spring 2016 project to ease the process of checking a song's profanity. It is still used today by KURE at Iowa State University.",
     link: 'https://lyricprof.znewton.xyz',
     tags: ['web', 'app', 'javascript', 'css', 'html', 'php'],
     github: 'https://github.com/znewton/lyricprof',
@@ -38,18 +50,34 @@ module.exports = [
     name: 'CyGames',
     description: 'A multiplayer game and chat site built for SE 339',
     link: 'http://cygamez.herokuapp.com',
-    tags: ['web', 'app', 'javascript', 'scss', 'html', 'NodeJS', 'React', 'firebase', 'socket.io'],
+    tags: [
+      'web',
+      'app',
+      'javascript',
+      'scss',
+      'html',
+      'NodeJS',
+      'React',
+      'firebase',
+      'socket.io',
+    ],
     github: 'https://github.com/znewton/cygames',
     completeness: 0.7,
-    collaborators: [{name: 'Nick Behrens', link: 'https://nab0310.github.io/'}],
+    collaborators: [
+      { name: 'Nick Behrens', link: 'https://nab0310.github.io/' },
+    ],
     image: cygames,
   },
   {
     name: 'MNEWGA Site Redesign',
-    description: (<div>
-      A website redesign for my aunt. Ended up not being used, but it was a fun exercise. <br />
-      Plus, they used my design concepts! <a href="https://www.mnewga.com/">Actual Site</a>
-    </div>),
+    description: (
+      <div>
+        A website redesign for my aunt. Ended up not being used, but it was a
+        fun exercise. <br />
+        Plus, they used my design concepts!{' '}
+        <a href="https://www.mnewga.com/">Actual Site</a>
+      </div>
+    ),
     link: 'http://mnewga.znewton.xyz',
     tags: ['web', 'site', 'javascript', 'css', 'html', 'React'],
     github: 'https://github.com/znewton/mnewga-Site-Redesign',
@@ -58,7 +86,8 @@ module.exports = [
   },
   {
     name: 'Beer',
-    description: 'A simple website for my dad to use to show what beer he has (he always supplies the beer) at family gatherings.',
+    description:
+      'A simple website for my dad to use to show what beer he has (he always supplies the beer) at family gatherings.',
     tags: ['web', 'site', 'javascript', 'html', 'css'],
     github: 'https://github.com/znewton/beer',
     completeness: 0.9,
@@ -66,15 +95,24 @@ module.exports = [
   },
   {
     name: 'uniPrint',
-    description: 'HackISU Spring 2017 project that fell apart very quickly on day 2. Will be revisited soon.',
-    tags: ['web', 'app', 'typescript', 'Angular', 'css', 'Angular Material', 'firebase'],
+    description:
+      'HackISU Spring 2017 project that fell apart very quickly on day 2. Will be revisited soon.',
+    tags: [
+      'web',
+      'app',
+      'typescript',
+      'Angular',
+      'css',
+      'Angular Material',
+      'firebase',
+    ],
     github: 'https://github.com/znewton/uniPrint',
     completeness: 0.1,
     collaborators: [
-      {name: 'Tristan Duyvejonck', link: 'https://duyve.com/'},
-      {name: 'Micheal Phippen', link: 'https://phippen.github.io/'},
-      {name: 'Cole Mulligan', link: 'https://github.com/cmulligan7'},
+      { name: 'Tristan Duyvejonck', link: 'https://duyve.com/' },
+      { name: 'Micheal Phippen', link: 'https://phippen.github.io/' },
+      { name: 'Cole Mulligan', link: 'https://github.com/cmulligan7' },
     ],
     image: '',
-  }
+  },
 ];

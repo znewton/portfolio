@@ -86,5 +86,5 @@ module.exports = {
   removeEndEventListener,
   addOneTimeEvent,
   removeOneTimeEvent,
-  debounce
+  debounce,
 };

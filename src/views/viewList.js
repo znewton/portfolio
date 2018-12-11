@@ -4,21 +4,21 @@ export default {
   welcome: {
     id: 'welcome',
     label: '',
-    component: Welcome
+    component: Welcome,
   },
   experience: {
     id: 'experience',
     label: 'Experience',
-    component: Experience
+    component: Experience,
   },
   projects: {
     id: 'projects',
     label: 'Projects',
-    component: Projects
+    component: Projects,
   },
   about: {
     id: 'about-me',
     label: 'About',
-    component: AboutMe
-  }
+    component: AboutMe,
+  },
 };

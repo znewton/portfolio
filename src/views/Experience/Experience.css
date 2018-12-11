@@ -12,6 +12,7 @@
   width: 80%;
   font-size: 2rem;
   position: relative;
+  margin-bottom: 1rem;
 }
 .Experience__experience-title::after {
   content: '';

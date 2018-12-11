@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeView: null
+      activeView: null,
     };
     this.setAppState = this.setAppState.bind(this);
   }
