@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/fontawesome-free-brands';
 
 const phone = '(612)275-9524';
-const email = 'znewton@iastate.edu';
+const email = 'zach@znewton.xyz';
 const facebook = '/zach.newton.16';
 const linkedin = '/zacharysnewton';
 const github = '/znewton';

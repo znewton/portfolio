@@ -49,9 +49,8 @@ class Nav extends Component {
           </a>
           <a
             className={this.getLinkClassName('resume')}
-            href={'/resume.doc'}
+            href={'/Resume.docx'}
             target="_blank"
-            disabled="true"
           >
             Resumé
           </a>
