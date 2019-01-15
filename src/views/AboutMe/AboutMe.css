@@ -1,2 +1,27 @@
 .AboutMe {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.AboutMe__snippet {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.AboutMe__snippet-title {
+  width: 80%;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.AboutMe__snippet-title::after {
+  content: '';
+  height: 1px;
+  width: 80%;
+  /* background-color: #ddddda; */
+  background: linear-gradient(45deg, #eeeeea, transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

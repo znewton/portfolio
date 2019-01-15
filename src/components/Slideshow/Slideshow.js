@@ -74,21 +74,23 @@ class Slideshow extends Component {
             );
           })}
         </div>
-        <div className="Slideshow__indicators">
-          {slides.map((slide, i) => {
-            const cnb = new ClassNameBuilder('Slideshow__indicator');
-            cnb.add('active', index === i);
-            return (
-              <div
-                className={cnb.className}
-                key={i}
-                onClick={() => this.setActive(i)}
-              >
-                {i + 1}
-              </div>
-            );
-          })}
-        </div>
+        {slides.length > 1 && (
+          <div className="Slideshow__indicators">
+            {slides.map((slide, i) => {
+              const cnb = new ClassNameBuilder('Slideshow__indicator');
+              cnb.add('active', index === i);
+              return (
+                <div
+                  className={cnb.className}
+                  key={slide.image.src}
+                  onClick={() => this.setActive(i)}
+                >
+                  {i + 1}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </React.Fragment>
     );
   }

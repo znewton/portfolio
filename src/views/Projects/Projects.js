@@ -45,7 +45,9 @@ class Projects extends View {
         <h1 className="display-font">Projects</h1>
         {projects.map((project, i) => (
           <React.Fragment key={i}>
-            <div className="Projects__project-title">{project.title}</div>
+            <div className="Projects__project-title display-font">
+              {project.title}
+            </div>
             <Project {...project} />
           </React.Fragment>
         ))}
