@@ -1,4 +1,6 @@
-yarn build
+#!/bin/bash
+
+npm run build
 
 USERNAME="figgynewts"
 SERVER="ftp.znewton.xyz"
