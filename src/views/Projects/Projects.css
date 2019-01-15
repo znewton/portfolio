@@ -1,2 +1,61 @@
 .Projects {
+  width: 100%;
 }
+
+.Projects__project {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.07), 0 8px 16px -8px rgba(0,0,0,.15);
+}
+.Projects__project-title {
+  width: 80%;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.Projects__project-title::after {
+  content: '';
+  height: 1px;
+  width: 80%;
+  background: linear-gradient(45deg, #eeeeea, transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Projects__project-description {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.Projects__project-stack {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 1rem;
+}
+.Projects__project-stack__tag {
+  padding: 0.3rem 0.5rem;
+  margin-right: 1rem;
+  background-color: #eeeeea;
+  border-radius: 3px;
+}
+.Projects__project-links {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Projects__project-links a {
+  flex-grow: 1;
+  padding: 1rem;
+  border-left: 1px solid #eeeeea;
+  transition: all ease 125ms;
+}
+.Projects__project-links a:hover {
+  background: linear-gradient(90deg, #def2fe, transparent);
+  text-decoration: none;
+}
+
