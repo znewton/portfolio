@@ -31,30 +31,30 @@ export default [
     img: css_logo,
     wrapperProps: {
       diameter: 110,
-      speed: 55
+      speed: 55,
     },
     imgProps: {
-      className: 'logo-md'
-    }
+      className: 'logo-md',
+    },
   },
   {
     id: 'dart',
     title: 'Dartlang',
     description: (
       <span>
-        I learned <a href="">Dart</a> during my internship at{' '}
-        <a href="">Workiva</a> in 2017. I describe it as "java + javascript, but
-        the good parts."
+        I learned <a href="https://www.dartlang.org/">Dart</a> during my
+        internship at <a href="https://www.workiva.com/">Workiva</a> in 2017. I
+        describe it as "java + javascript, but the good parts."
       </span>
     ),
     img: dart_logo,
     wrapperProps: {
       diameter: 85,
-      speed: 45
+      speed: 45,
     },
     imgProps: {
-      className: 'logo-md'
-    }
+      className: 'logo-md',
+    },
   },
   {
     id: 'html',
@@ -68,8 +68,8 @@ export default [
     ),
     img: html_logo,
     imgProps: {
-      className: 'logo-md'
-    }
+      className: 'logo-md',
+    },
   },
   {
     id: 'java',
@@ -85,8 +85,8 @@ export default [
     ),
     img: java_logo,
     imgProps: {
-      className: 'logo-md'
-    }
+      className: 'logo-md',
+    },
   },
   {
     id: 'react',
@@ -97,7 +97,7 @@ export default [
         bundle of joy {moment('20161015', 'YYYYMMDD').fromNow()}!
       </span>
     ),
-    img: react_logo
+    img: react_logo,
   },
   {
     id: 'me',
@@ -114,8 +114,8 @@ export default [
     wrapperProps: {
       hoverDiameter: 200,
       diameter: 200,
-      speed: 65
-    }
+      speed: 65,
+    },
   },
   {
     id: 'linux',
@@ -130,11 +130,11 @@ export default [
     img: linux_logo,
     wrapperProps: {
       diameter: 75,
-      speed: 40
+      speed: 40,
     },
     imgProps: {
-      className: 'logo-md'
-    }
+      className: 'logo-md',
+    },
   },
   {
     id: 'js',
@@ -156,7 +156,7 @@ export default [
     img: js_logo,
     wrapperProps: {
       diameter: 125,
-      speed: 60
-    }
-  }
+      speed: 60,
+    },
+  },
 ];

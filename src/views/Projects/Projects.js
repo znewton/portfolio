@@ -1,6 +1,14 @@
 import React from 'react';
 import './Projects.css';
 import View from '../View';
+import projects from './projects.data';
+
+class Project extends React.Component {
+  render() {
+    const { title, description, stack, github, live } = this.props;
+    return <div className="Project">{title}</div>;
+  }
+}
 
 class Projects extends View {
   constructor() {
@@ -13,6 +21,9 @@ class Projects extends View {
     return (
       <div className={this.cnb.className} id={this.props.id}>
         Projects
+        {projects.map((project, i) => (
+          <Project key={i} {...project} />
+        ))}
       </div>
     );
   }

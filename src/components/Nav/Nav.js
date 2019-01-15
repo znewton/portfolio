@@ -51,6 +51,7 @@ class Nav extends Component {
             className={this.getLinkClassName('resume')}
             href={'/Resume.docx'}
             target="_blank"
+            rel="noopener noreferrer"
           >
             Resumé
           </a>
@@ -63,7 +64,7 @@ class Nav extends Component {
     return e => {
       document.dispatchEvent(
         new CustomEvent('viewlinked', {
-          detail: { view: href }
+          detail: { view: href },
         })
       );
       // this.props.setAppState('activeView', href);
