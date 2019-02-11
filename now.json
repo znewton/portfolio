@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "portfolio",
+  "build": {
+    "env": {
+      "FORTAWESOME_TOKEN": "@fortawesome-token",
+      "NODE_PATH": "src/"
+    }
+  },
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
+  ]
+}
