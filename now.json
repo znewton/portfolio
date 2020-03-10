@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "portfolio",
-  "alias": ["znewton.xyz", "www.znewton.xyz"],
+  "alias": ["znewton.dev", "www.znewton.dev"],
   "build": {
     "env": {
       "FORTAWESOME_TOKEN": "@fortawesome-token",
