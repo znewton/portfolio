@@ -8,7 +8,7 @@
     "@fortawesome/fontawesome-pro-solid": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/react-fontawesome": "^0.1.2",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "^2.1.3"
